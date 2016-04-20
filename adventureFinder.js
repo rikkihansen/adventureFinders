@@ -13,7 +13,7 @@ var Camp = function (campType, campName, environment, difficulty, amenities, fam
 
 // Making empty Array to push camp data into ----------
 var campArray = new Array ();
-<<<<<<< HEAD
+campArray.push(new Camp());
 campArray.push(new Camp());
 campArray.push(new Camp());
 campArray.push(new Camp());
@@ -25,15 +25,3 @@ campArray.push(new Camp(['Tent', 'Cabin/Yurt', 'RV/Trailer'], "Honeyman Memorial
 campArray.push(new Camp(['Tent', 'Cabin/Yurt', 'RV/Trailer'], "Harris Beach State Park", "Coastal", 0, 3, 4, 2, 1, [42.0654, -123.3094]));
 campArray.push(new Camp(['Tent', 'Cabin/Yurt', 'RV/Trailer'], "South Beach State Park", "Coastal", 0, 3, 4, 2, 1, [43.9272, -124.1086]));
 campArray.push(new Camp(['Tent', 'Cabin/Yurt', 'RV/Trailer'], "Sunset Bay State Park", "Coastal", 0, 3, 4, 3, 2, [43.3306, -124.3730]));
-=======
-campArray.push(new Camp('Backpacking/Primitive','Jefferson Park', 'Forest', 3, 0, 0, 3, 0, [44.71005, -121.80559]));
-campArray.push(new Camp('Backpacking/Primitive', 'Elk Mountain', 'Mountain', 3, 0, 0, 3, 0, [45.33468, -121.60756]));
-campArray.push(new Camp('Backpacking/Primitive', 'Grand Valley/Badger Valley', 'Mountain', 4, 0, 0, 0, 0, [43.2011000, -89.9348500]));
-campArray.push(new Camp('Backpacking/Primitive' 'Timberline Trail Near Umbrella Falls', 'Forest', 1, 0, 3, 3, 0, [45.32892, -121.66086]));
-campArray.push();
-campArray.push();
-campArray.push();
-campArray.push();
-campArray.push();
-campArray.push();
->>>>>>> 04f0a6f0c32d4ba0b9bc112a1c69f53d9ca67ffb
