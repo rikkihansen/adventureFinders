@@ -25,3 +25,11 @@ campArray.push(new Camp(['Tent', 'Cabin/Yurt', 'RV/Trailer'], "Honeyman Memorial
 campArray.push(new Camp(['Tent', 'Cabin/Yurt', 'RV/Trailer'], "Harris Beach State Park", "Coastal", 0, 3, 4, 2, 1, [42.0654, -123.3094]));
 campArray.push(new Camp(['Tent', 'Cabin/Yurt', 'RV/Trailer'], "South Beach State Park", "Coastal", 0, 3, 4, 2, 1, [43.9272, -124.1086]));
 campArray.push(new Camp(['Tent', 'Cabin/Yurt', 'RV/Trailer'], "Sunset Bay State Park", "Coastal", 0, 3, 4, 3, 2, [43.3306, -124.3730]));
+
+//Make new array to 'clones' campArray, use to splice out results ------------------
+var availableCamp = new Array ();
+   function makeArrayCopy() {
+     for(var index=0; index < campArray.length; index++) {
+       availableCamp.push(campArray[index])
+     }
+   }
