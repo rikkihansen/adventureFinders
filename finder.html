@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <body>
+  <link rel="stylesheet" href="adventrueFinder.css">
+
   <!-- links to other pages in site, fixed  -->
   <nav>
     <a href="#">Home</a>
@@ -17,36 +19,36 @@
       difficult, or very important.
   </section>
   <!-- Starting Finder questions -->
-  <section>
-<p>
-    On a scale of 0-4 please rate how important electricity and running water are:
-  <label class="radio" for="quesions">
-    <input type="radio" name="question0" value="0"> 0
-    <input type="radio" name="question1" value="1"> 1
-    <input type="radio" name="question2" value="2"> 2
-    <input type="radio" name="question3" value="3"> 3
-    <input type="radio" name="question4" value="4"> 4
-  </label>
-</p>
-<p>
-  On a scale of 0-4 please rate the level of difficulty you would like to experience:
-  <label class="radio" for="quesions">
-    <input type="radio" name="question5" value="5"> 0
-    <input type="radio" name="quesion6" value="6"> 1
-    <input type="radio" name="question7" value="7"> 2
-    <input type="radio" name="question8" value="8"> 3
-    <input type="radio" name="question9" value="9"> 4
-  </label>
-</p>
-<p>
-  What type of camping will you be doing?
-  <label class="radio" for="quesions">
-    <input type="radio" name="question10" value="10"> Tent
-    <input type="radio" name="question11" value="11"> RV or Trailer
-    <input type="radio" name="question12" value="12"> Cabin or Yurt
-    <input type="radio" name="question13" value="13"> Car
-  </label>
-</p>
+  <section id="question">
+    <p id="radio0">
+        On a scale of 0-4 please rate how important electricity and running water are:
+      <label class="radio" for="quesions">
+        <input type="radio" name="question" value="0" checked="checked"> 0
+        <input type="radio" name="question" value="1"> 1
+        <input type="radio" name="question" value="2"> 2
+        <input type="radio" name="question" value="3"> 3
+        <input type="radio" name="question" value="4"> 4
+      </label>
+    </p>
+    <p id="radio1">
+      On a scale of 0-4 please rate the level of difficulty you would like to experience:
+      <label class="radio" for="quesions">
+        <input type="radio" name="question" value="5"> 0
+        <input type="radio" name="question" value="6"> 1
+        <input type="radio" name="question" value="7"> 2
+        <input type="radio" name="question" value="8"> 3
+        <input type="radio" name="question" value="9"> 4
+      </label>
+    </p>
+    <p id="radio2">
+      What type of camping will you be doing?
+      <label class="radio" for="quesions">
+        <input type="radio" name="question" value="10"> Tent
+        <input type="radio" name="question" value="11"> RV or Trailer
+        <input type="radio" name="question" value="12"> Cabin or Yurt
+        <input type="radio" name="question" value="13"> Car
+      </label>
+    </p>
   </section>
   <!-- Thanking user for participating -->
   <section>
@@ -55,6 +57,7 @@
   </section>
   <footer>
   </footer>
+  <script type="text/javascript" src="adventureFinder.js"></script>
 </body>
 <script src="adventureFinder.js" type="text/javascript"></script>
 </html>

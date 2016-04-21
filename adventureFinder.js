@@ -47,3 +47,18 @@ function questionFilter(property, arrayValue) {
 window.onload= function() {
   makeArrayCopy();
 }
+
+// displaying questions------------------------------------------
+  function displayQuestion () {
+      var question = document.getElementById("question");
+      console.log(question);
+      for (var x=0; x < 1; x++) {
+        var radioId = "radio" + x;
+        console.log(radioId);
+        var questionNumber = document.getElementById(radioId);
+        console.log(questionNumber);
+        questionNumber.style.display = "block";
+      }
+    }
+// adding eventlistener ----------------------------------------
+displayQuestion();
