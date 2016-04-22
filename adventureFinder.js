@@ -27,7 +27,7 @@ campArray.push(new Camp("Backpacking/Primitive", 'yes', 'yes', 'yes', 'no', "Bev
 campArray.push(new Camp("Honeyman Memorial State Park", 'yes', 'yes', 'yes', 'no', "Coastal", 0, 3, 4, 2, 1, [43.9272, -124.1086]));
 campArray.push(new Camp("Harris Beach State Park", 'yes', 'yes', 'yes', 'no', "Coastal", 0, 3, 4, 2, 1, [42.0654, -123.3094]));
 campArray.push(new Camp("South Beach State Park", 'yes', 'yes', 'yes', 'no', "Coastal", 0, 3, 4, 2, 1, [43.9272, -124.1086]));
-campArray.push(new Camp(["Sunset Bay State Park", 'yes', 'yes', 'yes', 'no', "Coastal", 0, 3, 4, 3, 2, [43.3306, -124.3730]));
+campArray.push(new Camp("Sunset Bay State Park", 'yes', 'yes', 'yes', 'no', "Coastal", 0, 3, 4, 3, 2, [43.3306, -124.3730]));
 
 //Make new array to 'clones' campArray, use to splice out results ------------------
 var availableCamp = new Array ();
@@ -49,16 +49,27 @@ window.onload= function() {
 }
 
 // displaying questions------------------------------------------
+  var x = 0;
   function displayQuestion () {
       var question = document.getElementById("question");
-      console.log(question);
-      for (var x=0; x < 1; x++) {
         var radioId = "radio" + x;
-        console.log(radioId);
-        var questionNumber = document.getElementById(radioId);
-        console.log(questionNumber);
-        questionNumber.style.display = "block";
+        var questionNumber = document.getElementById(raidoId);
+        questionNumber.style.display = "block"; x++;
       }
+
+    function nextQuestion () {
+        var
     }
 // adding eventlistener ----------------------------------------
+  // // var radio = document.getElementById("quesion");
+  //     radio.addEventListener('clicked', function() {
+  //       // var questionHolder = document.getElementById("question");
+  //     var radioQuestions = document.getElementById("radio0");
+  //   });
+  //
+   if (radioQuestions.onclick) {
+     radioQuestions.style.display = "none";
+   }
+
+// Call Functions ---------------------------------------------------
 displayQuestion();
