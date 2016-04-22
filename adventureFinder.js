@@ -62,29 +62,27 @@ function giveRadioValue(inputName, property){
   var x = 0;
   function displayQuestion () {
       var question = document.getElementById("question");
-<<<<<<< HEAD
       console.log(question);
-=======
       return(question);
       for (var x=0; x < 1; x++) {
->>>>>>> staging
         var radioId = "radio" + x;
+
         return(radioId);
         var questionNumber = document.getElementById(radioId);
         return(questionNumber);
         questionNumber.style.display = "block";
         x++;
       }
-    
+
 // adding eventlistener ----------------------------------------
 displayQuestion();
 
-<<<<<<< HEAD
-function displayResults() {
+//TODO: Build a function to diplay the camp chosen
+// function displayResults() {
+//
+// }
 
-=======
 //Functions that fun on pageload---------------------------------
 window.onload= function() {
   makeArrayCopy();
->>>>>>> staging
 }
