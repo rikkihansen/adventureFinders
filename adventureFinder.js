@@ -23,7 +23,7 @@ campArray.push(new Camp('Timberline Trail Near Umbrella Falls', 'no', 'no', 'no'
 campArray.push(new Camp("Lost Lake", 'yes', 'no', 'yes', 'no', "Mountain", 1, 2, 4, 1, 3, [45.4900, -121.8223]));
 campArray.push(new Camp("Olallie Lake", 'no', 'no', 'yes', 'no', "Mountain", 1, 4, 4, 2, 3, [44.807903, -121.788338]));
 campArray.push(new Camp("LaPine State Park", 'yes', 'yes', 'yes', 'no', "Forest", 0, 4, 4, 3, 4, [43.4606, -121.3048]));
-campArray.push(new Camp("Backpacking/Primitive", 'yes', 'yes', 'yes', 'no', "Beverly Beach", "Coastal", 0, 4, 4, 3, 4, [29.5147, -81.1445]));
+campArray.push(new Camp("Beverly Beach", 'yes', 'yes', 'yes', 'no', "Coastal", 0, 4, 4, 3, 4, [29.5147, -81.1445]));
 campArray.push(new Camp("Honeyman Memorial State Park", 'yes', 'yes', 'yes', 'no', "Coastal", 0, 3, 4, 2, 1, [43.9272, -124.1086]));
 campArray.push(new Camp("Harris Beach State Park", 'yes', 'yes', 'yes', 'no', "Coastal", 0, 3, 4, 2, 1, [42.0654, -123.3094]));
 campArray.push(new Camp("South Beach State Park", 'yes', 'yes', 'yes', 'no', "Coastal", 0, 3, 4, 2, 1, [43.9272, -124.1086]));
@@ -37,18 +37,29 @@ var availableCamp = new Array ();
      }
    }
 
-//Removes all items with the inputed value from the availableCamp array
-function questionFilter(property, arrayValue) {
+//Removes all objects WITH the inputed property value from the availableCamp array---------------
+function questionFilter(property, propertyValue) {
   availableCamp = availableCamp.filter(function( Camp ) {
-    return Camp[property] !== arrayValue;
+    return Camp[property] !== propertyValue;
   });
 }
 
-window.onload= function() {
-  makeArrayCopy();
-}
+//Radio Button Onclick: Removes all objects with a value equal to or less than the selected input--------------------------
+function giveRadioValue(inputName, property){
+  var radios = document.getElementsByName(inputName);
+  for(var i = 0; i < radios.length; i++) {
+    radios[i].onclick = function() {
+      for (var y=parseInt(this.value)-1; y >= 0; y--) {
+        questionFilter(property, y);
+        }
+        console.log(availableCamp);
+        chooseQuestion();
+      }
+    }
+  }
 
 // displaying questions------------------------------------------
+<<<<<<< HEAD
   var x = 0;
   function displayQuestion () {
       var question = document.getElementById("question");
@@ -72,4 +83,31 @@ window.onload= function() {
    }
 
 // Call Functions ---------------------------------------------------
+=======
+var x = 0;
+  function displayQuestion () {
+      var question = document.getElementById("question");
+        var radioId = "radio" + x;
+        var questionNumber = document.getElementById(radioId);
+        questionNumber.style.display = "block";
+      }
+
+// show and hiding questions on Finder page --------------------------
+
+  function chooseQuestion () {
+      var radioId = "radio" + x;
+      var questionNumber = document.getElementById(radioId);
+      questionNumber.style.display = "none";
+      x++;
+    displayQuestion();
+  }
+// adding eventlistener ----------------------------------------
+
+// calling Functions ---------------------------------------
+>>>>>>> staging
 displayQuestion();
+
+//Functions that fun on pageload---------------------------------
+window.onload= function() {
+  makeArrayCopy();
+}
