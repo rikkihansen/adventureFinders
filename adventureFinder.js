@@ -59,28 +59,22 @@ function giveRadioValue(inputName, property){
   }
 
 // displaying questions------------------------------------------
-<<<<<<< HEAD
+  var x = 0;
+  function displayQuestion () {
+      var question = document.getElementById("question");
+        var radioId = "radio" + x;
+        var questionNumber = document.getElementById(raidoId);
+        questionNumber.style.display = "block"; x++;
+      }
+
 var x = 0;
   function displayQuestion () {
       var question = document.getElementById("question");
         var radioId = "radio" + x;
-=======
-  var x = 0;
-  function displayQuestion () {
-      var question = document.getElementById("question");
-      console.log(question);
-      return(question);
-      for (var x=0; x < 1; x++) {
-        var radioId = "radio" + x;
-
-        return(radioId);
->>>>>>> f8f48089b30ef3127f68fdf5538e935dbfd8d4b2
         var questionNumber = document.getElementById(radioId);
         questionNumber.style.display = "block";
-        x++;
       }
 
-<<<<<<< HEAD
 // show and hiding questions on Finder page --------------------------
 
   function chooseQuestion () {
@@ -90,17 +84,10 @@ var x = 0;
       x++;
     displayQuestion();
   }
-=======
->>>>>>> f8f48089b30ef3127f68fdf5538e935dbfd8d4b2
 // adding eventlistener ----------------------------------------
 
 // calling Functions ---------------------------------------
 displayQuestion();
-
-//TODO: Build a function to diplay the camp chosen
-// function displayResults() {
-//
-// }
 
 //Functions that fun on pageload---------------------------------
 window.onload= function() {

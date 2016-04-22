@@ -11,3 +11,8 @@ April 19th 2016
      repository and making sure that we are all on the same page. Wish us luck!
 
 April 20th 2016
+       Today I feel like we got a lot of basics done, we got a skeleton for our html as well as our constructor made with an Array
+     of our camp sites that we have so far. We are working on a .splice to grab out the array elements.
+
+April 21st 2016
+    
