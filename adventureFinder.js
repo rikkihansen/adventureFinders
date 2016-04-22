@@ -47,30 +47,38 @@ function questionFilter(property, propertyValue) {
 //Radio Button Onclick: Removes all objects with a value equal to or less than the selected input--------------------------
 function giveRadioValue(inputName, property){
   var radios = document.getElementsByName(inputName);
-  var myValue = this.value;
   for(var i = 0; i < radios.length; i++) {
     radios[i].onclick = function() {
-      for (var y=0; y < radios.length; y++) {
-        questionFilter(property,this.value--);
+      for (var y=parseInt(this.value)-1; y >= 0; y--) {
+        questionFilter(property, y);
         }
         console.log(availableCamp);
+        chooseQuestion();
       }
     }
   }
 
 // displaying questions------------------------------------------
+var x = 0;
   function displayQuestion () {
       var question = document.getElementById("question");
-      return(question);
-      for (var x=0; x < 1; x++) {
         var radioId = "radio" + x;
-        return(radioId);
         var questionNumber = document.getElementById(radioId);
-        return(questionNumber);
         questionNumber.style.display = "block";
       }
-    }
+
+// show and hiding questions on Finder page --------------------------
+
+  function chooseQuestion () {
+      var radioId = "radio" + x;
+      var questionNumber = document.getElementById(radioId);
+      questionNumber.style.display = "none";
+      x++;
+    displayQuestion();
+  }
 // adding eventlistener ----------------------------------------
+
+// calling Functions ---------------------------------------
 displayQuestion();
 
 //Functions that fun on pageload---------------------------------
