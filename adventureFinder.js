@@ -55,6 +55,7 @@ function radioScale(inputName, property){
         questionFilter(property,y);
       }
         console.log(availableCamp);
+        console.log(availableCamp.length);
         chooseQuestion();
     });
   }
@@ -66,6 +67,7 @@ function radioTag(inputID, property) {
   radios.addEventListener('click', function() {
         questionFilter(property,false);
         console.log(availableCamp);
+        console.log(availableCamp.length);
         chooseQuestion();
   });
 }
