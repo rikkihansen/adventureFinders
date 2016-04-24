@@ -39,7 +39,7 @@ var availableCamp = new Array ();
 
 //Removes all objects WITH the inputed property value from the availableCamp array---------------
 function questionFilter(property, propertyValue) {
-  availableCamp = availableCamp.filter(function( Camp ) {
+  availableCamp = availableCamp.filter(function(Camp) {
     return Camp[property] !== propertyValue;
   });
 }
@@ -59,14 +59,6 @@ function giveRadioValue(inputName, property){
   }
 
 // displaying questions------------------------------------------
-  var x = 0;
-  function displayQuestion () {
-      var question = document.getElementById("question");
-        var radioId = "radio" + x;
-        var questionNumber = document.getElementById(raidoId);
-        questionNumber.style.display = "block"; x++;
-      }
-
 var x = 0;
   function displayQuestion () {
       var question = document.getElementById("question");
