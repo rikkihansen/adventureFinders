@@ -57,12 +57,7 @@ function radioScale(inputName, property) {
                 questionFilter(property, y);
             }
             console.log(availableCamp);
-            removeMarkers(); //removes all markers from maps
-            addMarkers(); //updates map with remioaning markers in availableCamp
-            removeQuestion();
-            x++;
-            saveCampResults();
-            displayQuestion();
+            listenAction();
         });
     }
 
@@ -75,32 +70,47 @@ function radioTag(inputID, property) {
     radios.addEventListener('click', function() {
         questionFilter(property, false);
         console.log(availableCamp);
+        listenAction();
+    });
+
+}
+
+//listener Functions
+function listenAction() {
+    if (availableCamp.length == 0) {
+        availableCamp = JSON.parse(localStorage.getItem("camps"));
+        showUserResults();
+    } else if (availableCamp.length <= 3) {
+        showUserResults();
+    } else {
         removeMarkers(); //removes all markers from maps
         addMarkers(); //updates map with remioaning markers in availableCamp
         removeQuestion();
         x++;
         saveCampResults();
         displayQuestion();
-    });
-
+    }
 }
+
 
 // displaying questions------------------------------------------
 var x = 0;
 
 function displayQuestion() {
-    var question = document.getElementById("question");
-    var radioId = "radio" + x;
-    var questionNumber = document.getElementById(radioId);
-    questionNumber.style.display = "block";
-}
+        var question = document.getElementById("question");
+        var radioId = "radio" + x;
+        var questionNumber = document.getElementById(radioId);
+        questionNumber.style.display = "block";
+    }
+
 
 // show and hiding questions on Finder page --------------------------
 function removeQuestion() {
+    console.log(x);
     var radioId = "radio" + x;
     var questionNumber = document.getElementById(radioId);
     questionNumber.style.display = "none";
-  }
+}
 
 //Functions that fun on pageload---------------------------------
 window.onload = function() {
@@ -180,5 +190,14 @@ function getCampResults() {
     };
     removeQuestion();
     displayQuestion();
+}
 
+function showUserResults() {
+    removeMarkers(); //removes all markers from maps
+    addMarkers(); //updates map with remioaning markers in availableCamp
+    console.log(x);
+    removeQuestion();
+    x = 7;
+    displayQuestion();
+    console.log("user results");
 }
