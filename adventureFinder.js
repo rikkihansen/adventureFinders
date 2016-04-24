@@ -1,23 +1,23 @@
 /// Start of adventrueFinder -----------
-var Camp = function (campName, carCamp, rv, cabin, backpack, forest, mountain, coast, difficulty, amenities, family, pet, activities, latlong) {
-  this.campName= campName;
-  this.carCamp= carCamp;
-  this.rv= rv;
-  this.cabin = cabin;
-  this.backpack= backpack;
-  this.forest= forest;
-  this.mountain= mountain;
-  this.coastal= coast;
-  this.difficulty= difficulty;
-  this.amenities= amenities;
-  this.family= family;
-  this.pet= pet;
-  this.activities= activities;
-  this.latlong= latlong;
+var Camp = function(campName, carCamp, rv, cabin, backpack, forest, mountain, coast, difficulty, amenities, family, pet, activities, latlong) {
+    this.campName = campName;
+    this.carCamp = carCamp;
+    this.rv = rv;
+    this.cabin = cabin;
+    this.backpack = backpack;
+    this.forest = forest;
+    this.mountain = mountain;
+    this.coastal = coast;
+    this.difficulty = difficulty;
+    this.amenities = amenities;
+    this.family = family;
+    this.pet = pet;
+    this.activities = activities;
+    this.latlong = latlong;
 };
 
 // Making empty Array to push camp data into ----------
-var campArray = new Array ();
+var campArray = new Array();
 campArray.push(new Camp('Jefferson Park', false, false, false, true, true, false, false, 3, 0, 0, 3, 0, [44.71005, -121.80559]));
 campArray.push(new Camp('Elk Mountain', false, false, false, true, false, true, false, 3, 0, 0, 3, 0, [45.33468, -121.60756]));
 campArray.push(new Camp('Grand Valley/Badger Valley', false, false, false, true, false, true, false, 4, 0, 0, 0, 0, [43.2011000, -89.9348500]));
@@ -33,82 +33,90 @@ campArray.push(new Camp("Sunset Bay State Park", true, true, true, false, false,
 
 //Make new array to 'clones' campArray, use to splice out results ------------------
 var availableCamp = new Array();
+
 function makeArrayCopy() {
-  for(var index=0; index < campArray.length; index++) {
-    availableCamp.push(campArray[index])
-  }
-  addMarkers();  //adds available Camps to map
+    for (var index = 0; index < campArray.length; index++) {
+        availableCamp.push(campArray[index])
+    }
+    addMarkers(); //adds available Camps to map
 }
 
 //Filters out all objects WITH a given property falue-----------------------------
 function questionFilter(property, propertyValue) {
-  availableCamp = availableCamp.filter(function(Camp) {
-    return Camp[property] !== propertyValue;
-  });
+    availableCamp = availableCamp.filter(function(Camp) {
+        return Camp[property] !== propertyValue;
+    });
 }
 
 //Removes all objects with a value equal to or less than the selected input--------------------------
-function radioScale(inputName, property){
-  var radios = document.getElementsByName(inputName);
-  for(var i = 0; i < radios.length; i++) {
-    radios[i].addEventListener('click', function() {
-      for (var y=parseInt(this.value)-1; y >= 0; y--) {
-        questionFilter(property,y);
-      }
-        console.log(availableCamp);
-        removeMarkers(); //removes all markers from maps
-        addMarkers();  //updates map with remioaning markers in availableCamp
-        chooseQuestion();
-    });
-  }
+function radioScale(inputName, property) {
+    var radios = document.getElementsByName(inputName);
+    for (var i = 0; i < radios.length; i++) {
+        radios[i].addEventListener('click', function() {
+            for (var y = parseInt(this.value) - 1; y >= 0; y--) {
+                questionFilter(property, y);
+            }
+            console.log(availableCamp);
+            removeMarkers(); //removes all markers from maps
+            addMarkers(); //updates map with remioaning markers in availableCamp
+            removeQuestion();
+            x++;
+            saveCampResults();
+            displayQuestion();
+        });
+    }
+
 }
+
 
 //Removes all objects with a "false" value for the object property selected--------------------------------
 function radioTag(inputID, property) {
-  var radios = document.getElementById(inputID);
-  radios.addEventListener('click', function() {
-        questionFilter(property,false);
+    var radios = document.getElementById(inputID);
+    radios.addEventListener('click', function() {
+        questionFilter(property, false);
         console.log(availableCamp);
         removeMarkers(); //removes all markers from maps
         addMarkers(); //updates map with remioaning markers in availableCamp
-        chooseQuestion();
-  });
+        removeQuestion();
+        x++;
+        saveCampResults();
+        displayQuestion();
+    });
+
 }
 
 // displaying questions------------------------------------------
 var x = 0;
-function displayQuestion () {
-  var question = document.getElementById("question");
-  var radioId = "radio" +x;
-  var questionNumber = document.getElementById(radioId);
-  questionNumber.style.display = "block";
+
+function displayQuestion() {
+    var question = document.getElementById("question");
+    var radioId = "radio" + x;
+    var questionNumber = document.getElementById(radioId);
+    questionNumber.style.display = "block";
 }
 
 // show and hiding questions on Finder page --------------------------
-  function chooseQuestion () {
-      var radioId = "radio" + x;
-      var questionNumber = document.getElementById(radioId);
-      questionNumber.style.display = "none";
-      x++;
-    displayQuestion();
+function removeQuestion() {
+    var radioId = "radio" + x;
+    var questionNumber = document.getElementById(radioId);
+    questionNumber.style.display = "none";
   }
 
 //Functions that fun on pageload---------------------------------
-window.onload= function() {
-  makeArrayCopy();
-  displayQuestion();
-  radioTag('in1a', 'carCamp');
-  radioTag('in1b', 'rv');
-  radioTag('in1c', 'cabin');
-  radioTag('in1d', 'backpack');
-  radioTag('in2a', 'mountain');
-  radioTag('in2b', 'coastal');
-  radioTag('in2c', 'forest');
-  radioScale('question3', 'amenities');
-  radioScale('question4', 'difficulty');
-  radioScale('question5', 'family');
-  radioScale('question6', 'pet');
-  radioScale('question7', 'activities');
+window.onload = function() {
+    getCampResults();
+    radioTag('in1a', 'carCamp');
+    radioTag('in1b', 'rv');
+    radioTag('in1c', 'cabin');
+    radioTag('in1d', 'backpack');
+    radioTag('in2a', 'mountain');
+    radioTag('in2b', 'coastal');
+    radioTag('in2c', 'forest');
+    radioScale('question3', 'amenities');
+    radioScale('question4', 'difficulty');
+    radioScale('question5', 'family');
+    radioScale('question6', 'pet');
+    radioScale('question7', 'activities');
 }
 
 // initialize and add interactive Leafletjs map centered on Oregon with custom icons
@@ -124,31 +132,53 @@ var myIcon = L.icon({
     iconUrl: 'images/nature.png',
     iconSize: [30, 30],
     iconAnchor: [15, 30],
-    });
+});
 
 var markers = new L.layerGroup(); //groups all camp markers into a group to ease placement and removal
 
 
 //function that places markers on latlong in campArray objects
 function addMarkers() {
-  for (var index = 0; index < availableCamp.length; index++) {
-  var markerLatLng = campArray[index].latlong;
-  // console.log(markerLatLng);
-  var marker = new L.marker(markerLatLng, {icon: myIcon});
-  marker.bindPopup(availableCamp[index].campName);
-  marker.on('mouseover', function (e) {
+    for (var index = 0; index < availableCamp.length; index++) {
+        var markerLatLng = campArray[index].latlong;
+        // console.log(markerLatLng);
+        var marker = new L.marker(markerLatLng, {
+            icon: myIcon
+        });
+        marker.bindPopup(availableCamp[index].campName);
+        marker.on('mouseover', function(e) {
             this.openPopup();
         });
-        marker.on('mouseout', function (e) {
+        marker.on('mouseout', function(e) {
             this.closePopup();
         });
-    markers.addLayer(marker);
-  }
-  mymap.addLayer(markers);
+        markers.addLayer(marker);
+    }
+    mymap.addLayer(markers);
 }
 
 // function to remove markers
 function removeMarkers() {
-      mymap.removeLayer(markers);
-      markers.clearLayers();
-  }
+    mymap.removeLayer(markers);
+    markers.clearLayers();
+}
+
+//save user progress in local storage
+function saveCampResults() {
+    localStorage.setItem('camps', JSON.stringify(availableCamp));
+    localStorage.setItem('question', JSON.stringify(x));
+}
+
+//return user progress in local storage
+function getCampResults() {
+    if (localStorage.getItem("camps") != null) {
+        availableCamp = JSON.parse(localStorage.getItem("camps"));
+        x = parseInt(JSON.parse(localStorage.getItem("question")));
+        addMarkers();
+    } else {
+        makeArrayCopy();
+    };
+    removeQuestion();
+    displayQuestion();
+
+}
