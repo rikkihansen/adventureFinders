@@ -4,20 +4,26 @@ html {
   height: 100%;
 }
 body {
-  background-image: url("Images/backgroundimage.jpeg");
+  /*background-image: url("Images/backgroundimage.jpeg");*/
   margin: 0px;
 }
 nav {
  width: 100%;
  height: 75px;
  display: inline-block;
- background-color: grey;
- opacity: 0.4;
+ background-color: white;
+ opacity: 0.2;
+ position: fixed;
 }
-a {
-  color: white;
+#topNav a {
+  color: navy blue;
   margin: 100px;
-  display: block;
+  font-size: 20px;
+  text-decoration: none;
+  font-family: 'Montserrat',Tenor Sans, sans-serif;
+  padding-left: 50px;
+  margin-top: 25px;
+  display: inline-block;
 }
 footer {
   width: 100%;
@@ -27,12 +33,48 @@ footer {
   opacity: 0.4;
 }
 a:hover {
-
+  text-decoration: underline;
+  font-weight: bold;
+  font-style: italic;
 }
-
-
-
-
+.wrap {
+  height: 1000px;
+  width: 100%;
+  background-image: url("Images/backgroundimage.jpeg");
+  /*position: fixed;*/
+}
+.content {
+  height: 1000px;
+  width: 100%;
+  background-color: #795f63;
+  color: white;
+}
+.headings {
+  font-size: 60px;
+  font-weight: bold;
+  font-family: 'Montserrat',Tenor Sans, sans-serif;
+  text-align: center;
+  margin-top: 50px;
+  /*text-shadow: 2px 2px #888888;*/
+}
+.paragraph {
+  font-size: 20px;
+  text-align: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  height: 300px;
+}
+.link {
+  text-decoration: none;
+  color: white;
+}
+footer {
+  /*width: 100%;
+  height: 75px;*/
+  display: inline-block;
+  background-color: white;
+  opacity: 0.2;
+}
 
 
 #radio1 {
