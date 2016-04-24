@@ -20,16 +20,19 @@ var Camp = function(campName, carCamp, rv, cabin, backpack, forest, mountain, co
 var campArray = new Array();
 campArray.push(new Camp('Jefferson Park', false, false, false, true, true, false, false, 3, 0, 0, 3, 0, [44.71005, -121.80559]));
 campArray.push(new Camp('Elk Mountain', false, false, false, true, false, true, false, 3, 0, 0, 3, 0, [45.33468, -121.60756]));
-campArray.push(new Camp('Grand Valley/Badger Valley', false, false, false, true, false, true, false, 4, 0, 0, 0, 0, [43.2011000, -89.9348500]));
+campArray.push(new Camp('Grand Valley/Badger Valley', false, false, false, true, false, true, false, 4, 0, 0, 0, 0, [47.898, -123.369]));
 campArray.push(new Camp('Timberline Trail Near Umbrella Falls', false, false, false, true, true, false, false, 1, 0, 3, 3, 0, [45.32892, -121.66086]));
 campArray.push(new Camp("Lost Lake", true, false, true, false, false, true, false, 1, 2, 4, 1, 3, [45.4900, -121.8223]));
 campArray.push(new Camp("Olallie Lake", false, false, true, false, false, true, false, 1, 4, 4, 2, 3, [44.807903, -121.788338]));
 campArray.push(new Camp("LaPine State Park", true, true, true, false, true, false, false, 0, 4, 4, 3, 4, [43.4606, -121.3048]));
-campArray.push(new Camp("Beverly Beach", true, true, true, false, false, false, true, 0, 4, 4, 3, 4, [29.5147, -81.1445]));
+campArray.push(new Camp("Beverly Beach", true, true, true, false, false, false, true, 0, 4, 4, 3, 4, [44.7205, -121.0560]));
 campArray.push(new Camp("Honeyman Memorial State Park", true, true, true, false, false, false, true, 0, 3, 4, 2, 1, [43.9272, -124.1086]));
 campArray.push(new Camp("Harris Beach State Park", true, true, true, false, false, false, true, 0, 3, 4, 2, 1, [42.0654, -123.3094]));
 campArray.push(new Camp("South Beach State Park", true, true, true, false, false, false, true, 0, 3, 4, 2, 1, [43.9272, -124.1086]));
 campArray.push(new Camp("Sunset Bay State Park", true, true, true, false, false, false, true, 0, 3, 4, 3, 2, [43.3306, -124.3730]));
+campArray.push(new Camp("Tumalo State Park", true, true, true, false, true, false, false, 1, 3, 4, 3, 4, [44.1288, -121.3309]));
+campArray.push(new Camp("Iron Creek", true, true, false, false, true, false, false, 1, 2, 2, 2, 2, [46.1746, -122.7746]));
+
 
 //Make new array to 'clones' campArray, use to splice out results ------------------
 var availableCamp = new Array();
@@ -130,7 +133,7 @@ window.onload = function() {
 }
 
 // initialize and add interactive Leafletjs map centered on Oregon with custom icons
-var mymap = L.map('mapid').setView([44.5, -120.0964], 6);
+var mymap = L.map('mapid').setView([45.523, -122.6764], 6);
 
 L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiamFtZXNjc21pdGgiLCJhIjoiY2luOWM1Z25sMXBsMnR5bHk0Nzlmc2J1dyJ9.97nb1uyTiSLTmXvbdYdWoA', {
     attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a> <a href="http://www.freepik.com/free-vector/map-pin-colourful-set_802102.htm">Designed by Freepik</a>',
@@ -140,7 +143,7 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=p
 }).addTo(mymap);
 var myIcon = L.icon({
     iconUrl: 'images/nature.png',
-    iconSize: [30, 30],
+    iconSize: [35, 35],
     iconAnchor: [15, 30],
 });
 
