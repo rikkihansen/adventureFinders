@@ -106,7 +106,7 @@ function displayQuestion() {
 
 // show and hiding questions on Finder page --------------------------
 function removeQuestion() {
-    console.log(x);
+    console.log(parseInt(x));
     var radioId = "radio" + x;
     var questionNumber = document.getElementById(radioId);
     questionNumber.style.display = "none";
