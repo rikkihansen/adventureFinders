@@ -192,6 +192,15 @@ function getCampResults() {
     displayQuestion();
 }
 
+function winningCamps() {
+  var finish = "";
+  for (var i = 0; i < availableCamp.length; i++) {
+    finish += "<li>"+ availableCamp[i].campName + "</li>";
+  }
+  document.getElementById('results').innerHTML = finish;
+}
+
+
 function showUserResults() {
     removeMarkers(); //removes all markers from maps
     addMarkers(); //updates map with remioaning markers in availableCamp
@@ -199,5 +208,6 @@ function showUserResults() {
     removeQuestion();
     x = 7;
     displayQuestion();
+    winningCamps();
     console.log("user results");
 }
