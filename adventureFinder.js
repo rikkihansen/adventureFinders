@@ -26,7 +26,7 @@ campArray.push(new Camp("Harris Beach State Park", 1, 0, 3, 2, 2, 3, "coastal", 
 campArray.push(new Camp("South Beach State Park", 2, 0, 3, 3, 3, 2, "coastal", [43.9272, -124.1086]));
 campArray.push(new Camp("Sunset Bay State Park", 3, 1, 2, 0, 2, 0, "coastal", [43.3306, -124.3730]));
 
-//Make new array to 'clones' campArray, use to splice out results ------------------
+//Make new array to 'clones' campArray; use to filter out results ------------------
 var availableCamp = new Array();
 
 function makeArrayCopy() {
@@ -36,38 +36,31 @@ function makeArrayCopy() {
     addMarkers(); //adds available Camps to map
 }
 
+//Creates counters for campsite properties; used to determine the filter value in the finder survey
+var comfortCounter = 0;
+var isolationCounter = 0;
+var accessibilityCounter = 0;
+var petCounter = 0;
+var familyCounter = 0;
+var activitiesCounter = 0;
+var areaCounter = 0;
+
 //Filters out all objects WITH a given property falue-----------------------------
 function questionFilter(property, propertyValue) {
-    availableCamp = availableCamp.filter(function(Camp) {
-        return Camp[property] !== propertyValue;
-    });
+  availableCamp = availableCamp.filter(function(Camp) {
+    return Camp[property] !== propertyValue;
+  });
 }
 
-//Removes all objects with a value equal to or less than the selected input--------------------------
-function radioScale(inputName, property) {
-    var radios = document.getElementsByName(inputName);
-    for (var i = 0; i < radios.length; i++) {
-        radios[i].addEventListener('click', function() {
-            for (var y = parseInt(this.value) - 1; y >= 0; y--) {
-                questionFilter(property, y);
-            }
-            console.log(availableCamp);
-            listenAction();
-        });
-    }
-}
-
-//Removes all objects with a "false" value for the object property selected--------------------------------
-function radioTag(inputID, property) {
+//Removes all objects with a "false" value for the object property selected, and increases the counter for that property
+function buttonBinder(inputID, property, counter) {
     var radios = document.getElementById(inputID);
     radios.addEventListener('click', function() {
-    var test = JSON.parse(this.value);
-    questionFilter(property, test);
+    questionFilter(property, counter);
         console.log(availableCamp.length);
         console.log(availableCamp);
-        listenAction();
+    listenAction();
     });
-
 }
 
 //listener Functions
@@ -87,7 +80,6 @@ function listenAction() {
     }
 }
 
-
 // displaying questions------------------------------------------
 var x = 0;
 
@@ -97,7 +89,6 @@ function displayQuestion() {
         var questionNumber = document.getElementById(radioId);
         questionNumber.style.display = "block";
     }
-
 
 // show and hiding questions on Finder page --------------------------
 function removeQuestion() {
@@ -110,33 +101,33 @@ function removeQuestion() {
 //Functions that fun on pageload---------------------------------
 window.onload = function() {
     getCampResults();
-    radioTag('comfort0', 'comfort');
-    radioTag('comfort1', 'comfort');
-    radioTag('comfort2', 'comfort');
-    radioTag('comfort3', 'comfort');
-    radioTag('isolation0', 'isolation');
-    radioTag('isolation1', 'isolation');
-    radioTag('isolation2', 'isolation');
-    radioTag('isolation3', 'isolation');
-    radioTag('accessibility0', 'accessibility');
-    radioTag('accessibility1', 'accessibility');
-    radioTag('accessibility2', 'accessibility');
-    radioTag('accessibility3', 'accessibility');
-    radioTag('activities0', 'activities');
-    radioTag('activities1', 'activities');
-    radioTag('activities2', 'activities');
-    radioTag('activities3', 'activities');
-    radioTag('family0', 'family');
-    radioTag('family1', 'family');
-    radioTag('family2', 'family');
-    radioTag('family3', 'family');
-    radioTag('pet0', 'pet');
-    radioTag('pet1', 'pet');
-    radioTag('pet2', 'pet');
-    radioTag('pet3', 'pet');
-    radioTag('forest', 'forest');
-    radioTag('coastal', 'coastal');
-    radioTag('mountain', 'mountain');
+    buttonBinder('comfort0', 'comfort', comfortCounter++);
+    buttonBinder('comfort1', 'comfort', comfortCounter++);
+    buttonBinder('comfort2', 'comfort', comfortCounter++);
+    buttonBinder('comfort3', 'comfort', comfortCounter++);
+    buttonBinder('isolation0', 'isolation', isolationCounter++);
+    buttonBinder('isolation1', 'isolation', isolationCounter++);
+    buttonBinder('isolation2', 'isolation', isolationCounter++);
+    buttonBinder('isolation3', 'isolation', isolationCounter++);
+    buttonBinder('accessibility0', 'accessibility', accessibilityCounter++);
+    buttonBinder('accessibility1', 'accessibility', accessibilityCounter++);
+    buttonBinder('accessibility2', 'accessibility', accessibilityCounter++);
+    buttonBinder('accessibility3', 'accessibility', accessibilityCounter++);
+    buttonBinder('activities0', 'activities', activitiesCounter++);
+    buttonBinder('activities1', 'activities', activitiesCounter++);
+    buttonBinder('activities2', 'activities', activitiesCounter++);
+    buttonBinder('activities3', 'activities', activitiesCounter++);
+    buttonBinder('family0', 'family', familyCounter++);
+    buttonBinder('family1', 'family', familyCounter++);
+    buttonBinder('family2', 'family', familyCounter++);
+    buttonBinder('family3', 'family', familyCounter++);
+    buttonBinder('pet0', 'pet', petCounter++);
+    buttonBinder('pet1', 'pet', petCounter++);
+    buttonBinder('pet2', 'pet', petCounter++);
+    buttonBinder('pet3', 'pet', petCounter++);
+    buttonBinder('forest', 'forest', areaCounter++);
+    buttonBinder('coastal', 'coastal', areaCounter++);
+    buttonBinder('mountain', 'mountain', areaCounter++);
 }
 
 // initialize and add interactive Leafletjs map centered on Oregon with custom icons
@@ -155,7 +146,6 @@ var myIcon = L.icon({
 });
 
 var markers = new L.layerGroup(); //groups all camp markers into a group to ease placement and removal
-
 
 //function that places markers on latlong in campArray objects
 function addMarkers() {
