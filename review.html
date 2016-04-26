@@ -1,31 +1,40 @@
 <!DOCTYPE html>
+<html>
+<head>
+  <title>Add An Adventure</title>
+  <link rel="stylesheet" href="adventureFinder.css"/>
 
+</head>
+<header>
+  <nav>
+      <a href="#">Home</a>
+      <a href="#">Finder</a>
+      <a href="#">Review</a>
+      <a href="#">About Us</a>
+  </nav>
+
+  <!-- TODO: add in hrader -->
+</header>
 <body>
     <!-- links to other pages in site, fixed  -->
-    <nav>
-        <a href="#">Home</a>
-        <a href="#">Finder</a>
-        <a href="#">Review</a>
-        <a href="#">About Us</a>
-    </nav>
     <section>
         We at <em><b>Adventure Finders&trade;</b></em> want to thank you for taking the time to go through our process so we could find you the best camp site for you and for trusting us with your adventures!</p>
 
         <p> We would appreciate it if you would take just a few more seconds to fill out our servey so we will be able to better help you and many other find their future adventure! </p>
     </section>
     <!-- Starting Review questions -->
-    <form>
+    <form id="campQuestions">
         <div>
             <p>Please tell us the name of the campground:</p>
-            <input type="text" value="Enter Campground Name" id="userCampName" name="campName" />
+            <input type="text" placeholder="Enter Campground Name" id="userCampName" name="campName" />
         </div>
         <div>
-            <p>What type of camping is available (click ALL that apply)</p>
+            <p>How would you the comfort of this campground?</p>
             <label class="radio" for="questions">
-                <input id="in1a" type="radio" name="tent" value="carCamp"> Tent/ Car
-                <input id="in1b" type="radio" name="rv" value="rv"> RV or Trailer
-                <input id="in1c" type="radio" name="cabin" value="cabin"> Cabin or Yurt
-                <input id="in1d" type="radio" name="backpak" value="backpack"> Backpack
+                <input id="in1a" type="radio" name="question1" value="carCamp"> Tent/ Car
+                <input id="in1b" type="radio" name="question1" value="rv"> RV or Trailer
+                <input id="in1c" type="radio" name="question1" value="cabin"> Cabin or Yurt
+                <input id="in1d" type="radio" name="question1" value="backpack"> Backpack
             </label>
         </div>
         <div>
@@ -96,14 +105,14 @@
         </div>
         <div>
             <p>Please provide the Latitude and Longitude of the campground.</p>
-            <input type="text" value="latitude" id="lat" name="lat" />
-            <input type="text" value="longitude" id="long" name="long" />
+            <input type="text" placeholder="latitude" id="lat" name="lat" />
+            <input type="text" placeholder="longitude" id="long" name="long" />
         </div>
-        <input type="submit" value="Submit">
+        <input type="submit" value="Submit" id="formBtn">
     </form>
-    <div>
-        <p>
-            Don't know the coordinates? Look them up on <a href="http://www.latlong.net/">MyGeoposition.com</a> by entering the campground name in the search box below:
+    <div >
+        <p id="frame">
+           Don't know the coordinates? Look them up on <a href="http://www.latlong.net/">MyGeoposition.com</a> by entering the campground name in the search box below:
         </p>
         <iframe src="http://mygeoposition.com/" width="800" height="400"></iframe>
     </div>
@@ -114,9 +123,10 @@
   <textarea name="comments" cols="40" rows="10"> Enter any additional comments here!
   </textarea> -->
     </form>
-    <footer>
-    </footer>
-    <script type="text/javascript" src="adventrueFinders.js"></script>
-</body>
+  </body>
 
+<footer>
+  <!-- TODO: add footer -->
+</footer>
+<script type="text/javascript" src="review.js"></script>
 </html>
