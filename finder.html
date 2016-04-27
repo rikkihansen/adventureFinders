@@ -2,21 +2,24 @@
 <html>
 <head>
   <title>AdventureFinder App</title>
-  <link rel="stylesheet" href="adventureFinder.css">
-  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" /> <!--map library -->
+  <link rel="stylesheet" href="global.css">
+  <link rel="stylesheet" href="finder.css">
+  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />  <!--map library -->
+  <link href='https://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
 </head>
 <body>
   <!-- links to other pages in site, fixed  -->
-  <nav>
-    <a href="#">Home</a>
-    <a href="#">Finder</a>
-    <a href="#">Review</a>
-    <a href="#">About Us</a>
+  <nav id="topNav">
+    <a href="home.html" class="aNav">Home</a>
+    <a href="finder.html" class="aNav">Finder</a>
+    <a href="review.html" class="aNav">Review</a>
+    <a href="about.html" class="aNav">About Us</a>
   </nav>
-  <h1>
-      Welcome to Finder&trade;!
-  </h1>
-  <section>
+  <p class="title">
+    Welcome to Finder&trade;!
+  </p>
+  <section class="paragraph">
       We at <em><b>Adventure Finder&trade;</b></em> have put together a series of questions for you to answer so that we
       can pair you up with the best camp site to give you an amazing camping experience!<br>
       Please go through the questionnaire us what is important to you.
@@ -94,8 +97,19 @@
     </div>
   </form>
   <div id="mapid"></div>
-  <footer>
-  </footer>
+  <div class="bottomNav">
+    <footer>
+      <a href="#">Contact Us</a>
+      <a href="about.html">About Us</a>
+      <a href="finder.html">Finder</a>
+      <a href="review.html">Review</a>
+      <a href="#">Page Info</a>
+      <!-- <a href="http://oregonstateparks.org/index.cfm?do=parkPage.dsp_parkPage&parkId=149">South Beach State Park</a>
+      <a href="http://lostlakeresort.org/">Lost Lake</a>
+      <a href="http://oregonstateparks.org/index.cfm?do=parkPage.dsp_parkPage&parkId=32">LaPine State Park</a>
+      <a href="http://www.reserveamerica.com/camping/sunset-bay-state-park/r/campgroundDetails.do?contractCode=OR&parkId=402382">Sunset Bay State Park</a> -->
+    </footer>
+  </div>
   <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
   <script type="text/javascript" src="adventureFinder.js"></script>
 </body>
