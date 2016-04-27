@@ -26,7 +26,7 @@
     <form id="campQuestions">
         <div>
             <p>Please tell us the name of the campground:</p>
-            <input type="text" placeholder="Enter Campground Name" id="userCampName" name="campName" />
+            <input type="text" placeholder="Enter Campground Name" id="userCampName" name="question0" />
         </div>
         <div>
             <p>How would you the comfort of this campground?</p>
@@ -105,8 +105,8 @@
         </div>
         <div>
             <p>Please provide the Latitude and Longitude of the campground.</p>
-            <input type="text" placeholder="latitude" id="lat" name="lat" />
-            <input type="text" placeholder="longitude" id="long" name="long" />
+            <input type="text" placeholder="latitude" id="lat" name="question8" />
+            <input type="text" placeholder="longitude" id="long" name="question9" />
         </div>
         <input type="submit" value="Submit" id="formBtn">
     </form>
@@ -114,7 +114,7 @@
         <p id="frame">
            Don't know the coordinates? Look them up on <a href="http://www.latlong.net/">MyGeoposition.com</a> by entering the campground name in the search box below:
         </p>
-        <iframe src="http://mygeoposition.com/" width="800" height="400"></iframe>
+        <iframe id="iFrame" src="http://mygeoposition.com/" width="800" height="400"></iframe>
     </div>
 
     <!-- <div>Please tell us about your adventure!</p>
