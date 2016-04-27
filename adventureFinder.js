@@ -16,15 +16,17 @@ var campArray = new Array();
 campArray.push(new Camp('Jefferson Park', 0, 3, 1, 2, 0, 0, "forest", [44.71005, -121.80559]));
 campArray.push(new Camp('Elk Mountain', 0, 2, 2, 3, 1, 0, "mountain", [45.33468, -121.60756]));
 campArray.push(new Camp('Grand Valley/Badger Valley', 0, 3, 0, 1, 1, 0, "forest", [43.2011000, -89.9348500]));
-campArray.push(new Camp('Timberline Trail Near Umbrella Falls', 0, 3, 0, 0, 0, 0, "forest", [45.32892, -121.66086]));
+campArray.push(new Camp('Timberline Trail Near Umbrella Falls', 0, 3, 0, 0, 0, 0, "forest", [47.898, -123.369]));
 campArray.push(new Camp("Lost Lake", 1, 1, 3, 1, 3, 3, "forest", [45.4900, -121.8223]));
 campArray.push(new Camp("Olallie Lake", 1, 2, 1, 2, 2, 2, "mountain", [44.807903, -121.788338]));
 campArray.push(new Camp("LaPine State Park", 2, 1, 2, 1, 2, 3, "forest", [43.4606, -121.3048]));
-campArray.push(new Camp("Beverly Beach", 2, 2, 2, 1, 3, 3, "coastal", [29.5147, -81.1445]));
+campArray.push(new Camp("Beverly Beach", 2, 2, 2, 1, 3, 3, "coastal", [44.7205, -121.0560]));
 campArray.push(new Camp("Honeyman Memorial State Park", 1, 1, 3, 2, 2, 2, "coastal", [43.9272, -124.1086]));
 campArray.push(new Camp("Harris Beach State Park", 1, 0, 3, 2, 2, 3, "coastal", [42.0654, -123.3094]));
 campArray.push(new Camp("South Beach State Park", 2, 0, 3, 3, 3, 2, "coastal", [43.9272, -124.1086]));
 campArray.push(new Camp("Sunset Bay State Park", 3, 1, 2, 0, 2, 0, "coastal", [43.3306, -124.3730]));
+campArray.push(new Camp("Tumalo State Park", 3, 1, 2, 3, 4, 4, "forest", [43.3306, -124.3730]));
+campArray.push(new Camp("Iron Creek", 2, 1, 2, 2, 2, 2, "forest", [43.3306, -124.3730]));
 
 //Creates counters for campsite properties; used to determine the filter value in the finder survey
 var comfortCounter = 0;
