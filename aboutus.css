@@ -1,4 +1,3 @@
-/* home page css */
 html {
   width: 100%;
   height: 100%;
@@ -34,7 +33,7 @@ a:hover {
 .wrap {
   height: 1000px;
   width: 100%;
-  background-image: url("Images/backgroundimage.jpeg");
+  background-image: url("Images/background3.jpg");
   position: fixed;
   z-index: -10;
   top: 0;
@@ -50,16 +49,9 @@ a:hover {
   width: 100%;
   background-color: rgba(121, 95, 99, 1);
   color: #e49d10;
-  margin-top: 1000px;
+  margin-top: 600px;
   padding-bottom: 100px;
   opacity: 0.9;
-}
-.headings {
-  font-size: 60px;
-  font-weight: bold;
-  font-family: 'Montserrat',Tenor Sans, sans-serif;
-  text-align: center;
-  /*text-shadow: 2px 2px #888888;*/
 }
 .paragraph {
   font-size: 20px;
@@ -71,11 +63,6 @@ a:hover {
   background-color: rgba(255, 255, 255, 0.4);
   border: 1px solid black;
   color:black;
-
-}
-.link {
-  text-decoration: none;
-  color: #e49d10;
 }
 footer {
   width: 100%;
@@ -94,31 +81,4 @@ footer {
 .bottomNav {
   background-color: white;
   opacity: 0.6;
-}
-
-
-#radio1 {
-  display: none;
-}
-#radio2 {
-  display: none;
-}
-#radio3 {
-  display: none;
-}
-#radio4 {
-  display: none;
-}
-#radio5 {
-  display: none;
-}
-#radio6 {
-  display: none;
-}
-#radio7 {
-  display: none;
-}
-#mapid {
-width: 100%;
-height: 400px;
 }

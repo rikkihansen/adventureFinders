@@ -10,6 +10,7 @@ button.addEventListener("click", function() {
 });
 
 function buildCampArray(newCamp) {
+<<<<<<< HEAD
   newCampArray.push(newCamp.question0.value);
   newCampArray.push(newCamp.question1.value);
   newCampArray.push(newCamp.question2.value);
@@ -20,6 +21,17 @@ function buildCampArray(newCamp) {
   newCampArray.push(newCamp.question7.value);
   newCampArray.push(newCamp.question8.value);
   newCampArray.push(newCamp.question9.value);
+=======
+  newCampArray.push(newCamp.campName.value);
+  newCampArray.push(newCamp.comfort.value);
+  newCampArray.push(newCamp.isolation.value);
+  newCampArray.push(newCamp.accessibility.value);
+  newCampArray.push(newCamp.pet.value);
+  newCampArray.push(newCamp.family.value);
+  newCampArray.push(newCamp.activities.value);
+  newCampArray.push(newCamp.areaType.value);
+  newCampArray.push(newCamp.long.value);
+>>>>>>> e00e7ec44ea216d13749100710c2a5fc01855741
   localStorage.setItem('newCamp', JSON.stringify(newCampArray));
   newCamp.reset();
   thankUser();
