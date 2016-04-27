@@ -15,7 +15,7 @@ var Camp = function(campName, comfort, isolation, accessibility, pet, family, ac
 var campArray = new Array();
 campArray.push(new Camp('Jefferson Park', 0, 3, 1, 2, 0, 0, "forest", [44.71005, -121.80559]));
 campArray.push(new Camp('Elk Mountain', 0, 2, 2, 3, 1, 0, "mountain", [45.33468, -121.60756]));
-campArray.push(new Camp('Grand Valley/Badger Valley', 0, 3, 0, 1, 1, 0, "forest", [43.2011000, -89.9348500]));
+campArray.push(new Camp('Grand Valley/Badger Valley', 0, 3, 0, 1, 1, 0, "forest", [43.2011000, -120.5542010]));
 campArray.push(new Camp('Timberline Trail Near Umbrella Falls', 0, 3, 0, 0, 0, 0, "forest", [47.898, -123.369]));
 campArray.push(new Camp("Lost Lake", 1, 1, 3, 1, 3, 3, "forest", [45.4900, -121.8223]));
 campArray.push(new Camp("Olallie Lake", 1, 2, 1, 2, 2, 2, "mountain", [44.807903, -121.788338]));
@@ -184,11 +184,14 @@ function saveCampResults() {
 //return user progress in local storage
 function getCampResults() {
     if (localStorage.getItem("camps") != null) {
-        availableCamp = JSON.parse(localStorage.getItem("camps"));
-        x = parseInt(JSON.parse(localStorage.getItem("question")));
-        addMarkers();
+      var startId = "radio0";
+      var startingQuestion = document.getElementById(startId);
+      startingQuestion.style.display = "none";
+      availableCamp = JSON.parse(localStorage.getItem("camps"));
+      x = parseInt(JSON.parse(localStorage.getItem("question")));
+      addMarkers();
     } else {
-        makeArrayCopy();
+      makeArrayCopy();
     };
     removeQuestion();
     displayQuestion();
