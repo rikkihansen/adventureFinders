@@ -6,40 +6,81 @@ var button = document.getElementById("formBtn")
 button.addEventListener("click", function() {
     event.preventDefault();
     newCamp = this.form;
-    buildCampArray(newCamp);
+    evaluateForm(newCamp);
+    //buildCampArray(newCamp);
 });
 
+//check to see if all inputs have data
+function evaluateForm(newCamp) {
+    var formIsValid = true;
+    if (newCamp.campName.value == "") {
+        newCamp.campName.setAttribute("class", "required");
+        formIsValid = false;
+    }
+    if (newCamp.comfort.value == "") {
+      document.getElementById("comfort").setAttribute("class", "required");
+      formIsValid = false;
+
+    }
+    if (newCamp.isolation.value == "") {
+        document.getElementById("isolation").setAttribute("class", "required");
+        formIsValid = false;
+    }
+    if (newCamp.accessibility.value == "") {
+        document.getElementById("accessibility").setAttribute("class", "required");
+        formIsValid = false;
+    }
+    if (newCamp.pet.value == "") {
+        document.getElementById("pet").setAttribute("class", "required");
+        formIsValid = false;
+    }
+    if (newCamp.family.value == "") {
+        document.getElementById("family").setAttribute("class", "required");
+        formIsValid = false;
+    }
+    if (newCamp.activities.value == "") {
+        document.getElementById("activities").setAttribute("class", "required");
+        formIsValid = false;
+    }
+    if (newCamp.areaType.value == "") {
+        document.getElementById("areaType").setAttribute("class", "required");
+        formIsValid = false;
+    }
+    if (newCamp.lat.value == "") {
+        newCamp.lat.setAttribute("class", "required");
+        formIsValid = false;
+    }
+    if (newCamp.long.value == "") {
+        newCamp.long.setAttribute("class", "required");
+        formIsValid = false;
+    }
+    console.log(formIsValid);
+    if (formIsValid) {
+        buildCampArray(newCamp);
+    };
+}
+
+
+//build array of user input
 function buildCampArray(newCamp) {
-<<<<<<< HEAD
-  newCampArray.push(newCamp.question0.value);
-  newCampArray.push(newCamp.question1.value);
-  newCampArray.push(newCamp.question2.value);
-  newCampArray.push(newCamp.question3.value);
-  newCampArray.push(newCamp.question4.value);
-  newCampArray.push(newCamp.question5.value);
-  newCampArray.push(newCamp.question6.value);
-  newCampArray.push(newCamp.question7.value);
-  newCampArray.push(newCamp.question8.value);
-  newCampArray.push(newCamp.question9.value);
-=======
-  newCampArray.push(newCamp.campName.value);
-  newCampArray.push(newCamp.comfort.value);
-  newCampArray.push(newCamp.isolation.value);
-  newCampArray.push(newCamp.accessibility.value);
-  newCampArray.push(newCamp.pet.value);
-  newCampArray.push(newCamp.family.value);
-  newCampArray.push(newCamp.activities.value);
-  newCampArray.push(newCamp.areaType.value);
-  newCampArray.push(newCamp.long.value);
->>>>>>> e00e7ec44ea216d13749100710c2a5fc01855741
-  localStorage.setItem('newCamp', JSON.stringify(newCampArray));
-  newCamp.reset();
-  thankUser();
+    newCampArray.push(newCamp.campName.value);
+    newCampArray.push(newCamp.comfort.value);
+    newCampArray.push(newCamp.isolation.value);
+    newCampArray.push(newCamp.accessibility.value);
+    newCampArray.push(newCamp.pet.value);
+    newCampArray.push(newCamp.family.value);
+    newCampArray.push(newCamp.activities.value);
+    newCampArray.push(newCamp.areaType.value);
+    newCampArray.push(newCamp.lat.value);
+    newCampArray.push(newCamp.long.value);
+    localStorage.setItem('newCamp', JSON.stringify(newCampArray));
+    newCamp.reset();
+    thankUser();
 };
 
 function thankUser() {
-  document.getElementById("campQuestions").setAttribute("display", "none");
-  document.getElementById("frame").setAttribute("display", "none");
-  document.getElementById("iFrame").setAttribute("display", "none");
-  document.getElementById("campQuestions").innerHTML = "Thank you for submitting a new camp!";
-}
+    document.getElementById("campQuestions").setAttribute("display", "none");
+    document.getElementById("frame").setAttribute("display", "none");
+    document.getElementById("iFrame").setAttribute("display", "none");
+    document.getElementById("campQuestions").innerHTML = "Thank you for submitting a new camp!";
+};
