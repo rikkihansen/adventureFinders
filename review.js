@@ -11,14 +11,13 @@ button.addEventListener("click", function() {
 
 function buildCampArray(newCamp) {
   newCampArray.push(newCamp.campName.value);
-  newCampArray.push(newCamp.question1.value);
-  newCampArray.push(newCamp.question2.value);
-  newCampArray.push(newCamp.question3.value);
-  newCampArray.push(newCamp.question4.value);
-  newCampArray.push(newCamp.question5.value);
-  newCampArray.push(newCamp.question6.value);
-  newCampArray.push(newCamp.question7.value);
-  newCampArray.push(newCamp.lat.value);
+  newCampArray.push(newCamp.comfort.value);
+  newCampArray.push(newCamp.isolation.value);
+  newCampArray.push(newCamp.accessibility.value);
+  newCampArray.push(newCamp.pet.value);
+  newCampArray.push(newCamp.family.value);
+  newCampArray.push(newCamp.activities.value);
+  newCampArray.push(newCamp.areaType.value);
   newCampArray.push(newCamp.long.value);
   localStorage.setItem('newCamp', JSON.stringify(newCampArray));
   newCamp.reset();
