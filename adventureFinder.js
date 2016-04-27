@@ -192,6 +192,28 @@ function getCampResults() {
     displayQuestion();
 }
 
+function resetDisplay() {
+  var radioId = "radio" + x;
+  var questionNumber = document.getElementById(radioId);
+  questionNumber.style.display = "none";
+  var question = document.getElementById("question");
+  var radioId = "radio0";
+  var questionNumber = document.getElementById(radioId);
+  questionNumber.style.display = "block";
+  x = 0;
+}
+
+//Reset button: clears out local storage
+document.getElementById("reset").addEventListener("click", function(){
+    localStorage.clear();
+    resetDisplay();
+    availableCamp = [];
+    makeArrayCopy();
+    console.log(x);
+    console.log(availableCamp.length);
+});
+
+//When called, can display a list of all camp names remaining in the availableCamp array---------------
 function winningCamps() {
   var finish = "";
   for (var i = 0; i < availableCamp.length; i++) {
@@ -199,7 +221,6 @@ function winningCamps() {
   }
   document.getElementById('results').innerHTML = finish;
 }
-
 
 function showUserResults() {
     removeMarkers(); //removes all markers from maps
