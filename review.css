@@ -1,0 +1,8 @@
+input.required {
+    background-color: red;
+    color: black;
+}
+
+.required {
+  color: red;
+}

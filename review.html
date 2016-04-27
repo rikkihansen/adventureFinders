@@ -3,7 +3,7 @@
 <head>
   <title>Add An Adventure</title>
   <link rel="stylesheet" href="adventureFinder.css"/>
-
+  <link rel="stylesheet" href="review.css"/>
 </head>
 <header>
   <nav>
@@ -13,7 +13,7 @@
       <a href="#">About Us</a>
   </nav>
 
-  <!-- TODO: add in hrader -->
+  <!-- TODO: add in header -->
 </header>
 <body>
     <!-- links to other pages in site, fixed  -->
@@ -26,79 +26,79 @@
     <form id="campQuestions">
         <div>
             <p>Please tell us the name of the campground:</p>
-            <input type="text" placeholder="Enter Campground Name" id="userCampName" name="question0" />
+            <input type="text" placeholder="Enter Campground Name" id="userCampName" name="campName" />
         </div>
         <div>
-            <h1>Comfort</h1>
+            <h1 id="comfort">Comfort</h1>
             <p>Please rate the comfort of the campsite. How accessibile were the amenities? If you stayed in a cabin or yurt, how were the accommodations? If you slept in a tent, how flat and/or rock-free was your site?</p>
             <label class="radio" for="questions">
-                <input type="radio" name="question1" value="0"> Poor
-                <input type="radio" name="question1" value="1"> Average
-                <input type="radio" name="question1" value="2"> Good
-                <input type="radio" name="question1" value="3"> Excellent
+                <input type="radio" name="comfort" value="0"> Poor
+                <input type="radio" name="comfort" value="1"> Average
+                <input type="radio" name="comfort" value="2"> Good
+                <input type="radio" name="comfort" value="3"> Excellent
             </label>
         </div>
         <div>
-          <h1>Privacy</h1>
+          <h1 id="isolation">Privacy</h1>
           <p>Please rate your campsite's privacy. Did you feel adequately isolated from other camping parties? What was your degree of solitude?</p>
           <label class="radio" for="questions">
-            <input type="radio" name="question2" value="0"> Poor
-            <input type="radio" name="question2" value="1"> Average
-            <input type="radio" name="question2" value="2"> Good
-            <input type="radio" name="question2" value="3"> Excellent
+            <input type="radio" name="isolation" value="0"> Poor
+            <input type="radio" name="isolation" value="1"> Average
+            <input type="radio" name="isolation" value="2"> Good
+            <input type="radio" name="isolation" value="3"> Excellent
           </label>
         </div>
         <div>
-          <h1>Accessibility</h1>
+          <h1 id="accessibility">Accessibility</h1>
           <p>Please rate the campsite's accessibility. How easy was it to get to? Were you able to travel to other attactions and/or locations from the campgrounds?</p>
           <label class="radio" for="quesions">
-            <input type="radio" name="question3" value="0"> Poor
-            <input type="radio" name="question3" value="1"> Average
-            <input type="radio" name="question3" value="2"> Good
-            <input type="radio" name="question3" value="3"> Excellent
+            <input type="radio" name="accessibility" value="0"> Poor
+            <input type="radio" name="accessibility" value="1"> Average
+            <input type="radio" name="accessibility" value="2"> Good
+            <input type="radio" name="accessibility" value="3"> Excellent
           </label>
         </div>
         <div>
-          <h1>Pets</h1>
+          <h1 id="pet">Pets</h1>
           <p>Please rate how pet-friendly the campsite was. Did other campers have pets? Did the site provide any owner accomodations (dog waste staitons, for example)? If pets were not allowed, please select "poor". </p>
           <label class="radio" for="quesions">
-            <input type="radio" name="question4" value="0"> Poor
-            <input type="radio" name="question4" value="1"> Average
-            <input type="radio" name="question4" value="2"> Good
-            <input type="radio" name="question4" value="3"> Excllent
+            <input type="radio" name="pet" value="0"> Poor
+            <input type="radio" name="pet" value="1"> Average
+            <input type="radio" name="pet" value="2"> Good
+            <input type="radio" name="pet" value="3"> Excllent
           </label>
         </div>
         <div>
-          <h1>Family</h1>
+          <h1 id="family">Family</h1>
           <p>Please rate the family-friendliness of the campsite. Was the campsite child-accessible? Were other families camping at the site? Were any family-friendly activities or services provided?</p>
           <label class="radio" for="quesions">
-            <input type="radio" name="question5" value="0"> Poor
-            <input type="radio" name="question5" value="1"> Average
-            <input type="radio" name="question5" value="2"> Good
-            <input type="radio" name="question5" value="3"> Excellent
+            <input type="radio" name="family" value="0"> Poor
+            <input type="radio" name="family" value="1"> Average
+            <input type="radio" name="family" value="2"> Good
+            <input type="radio" name="family" value="3"> Excellent
           </label>
         </div>
         <div>
-          <h1>Activities</h1>
+          <h1 id="activities">Activities</h1>
           <p>Please rate the quality of activites on or near the campsite. Were there activities on-site (local trails, rec stations, or sport fields, for example)? Were there any activities nearby?</p>
           <label class="radio" for="quesions">
-            <input type="radio" name="question6" value="0"> Poor
-            <input type="radio" name="question6" value="1"> Average
-            <input type="radio" name="question6" value="2"> Good
-            <input type="radio" name="question6" value="3"> Excellent
+            <input type="radio" name="activities" value="0"> Poor
+            <input type="radio" name="activities" value="1"> Average
+            <input type="radio" name="activities" value="2"> Good
+            <input type="radio" name="activities" value="3"> Excellent
           </label>
         </div>
         <div>
-            <h1>Environment</h1>
+            <h1 id="areaType">Environment</h1>
             <p>Which of the following best describes the type of enviroment in which your campground was situated?</p>
             <label class="radio" for="quesions">
-              <input type="radio" name="question7" value="forest"> Forested
-              <input type="radio" name="question7" value="mountain"> Mountainous
-              <input type="radio" name="question7" value="coastal"> Costal
+              <input type="radio" name="areaType" value="forest"> Forested
+              <input type="radio" name="areaType" value="mountain"> Mountainous
+              <input type="radio" name="areaType" value="coastal"> Costal
             </label>
         </div>
         <div>
-          <h1>Location</h1>
+          <h1 id="">Location</h1>
           <p>Please provide the Latitude and Longitude of the campground.</p>
           <input type="text" placeholder="latitude" id="lat" name="lat" />
           <input type="text" placeholder="longitude" id="long" name="long" />
