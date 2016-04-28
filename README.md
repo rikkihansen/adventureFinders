@@ -1,4 +1,5 @@
 # adventureFinders
+
     We are the adventure Finders! This group consists of James, Cass and Rikki, we are a group of motivated soon to be programmers that want to bring skill and technique to everything we do.
     Together we made a page that helps you find the perfect camp ground for you, whether you are wanting a fun outing with
  the family, a coastal adventure or an exclusive mountain hiking adventure we can find a location for you!

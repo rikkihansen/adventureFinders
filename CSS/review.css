@@ -1,0 +1,12 @@
+body {
+  background-color: #C0B0B2;
+}
+
+input.required {
+    background-color: red;
+    color: black;
+}
+
+.required {
+  color: red;
+}
