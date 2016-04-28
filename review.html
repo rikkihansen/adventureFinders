@@ -11,20 +11,20 @@
   <link rel="stylesheet" href="review.css"/>
 
 </head>
-<header>
-  <nav id="topNav">
+<body>
+  <div class="image">
+  <!-- <img src="Images/forest_review_banner.png" alt="Forest Banner"  /> -->
+  <p class="title">Add An Adventure<p>
+  </div>
+    <nav id="topNav">
     <a href="index.html" class="aNav">Home</a>
     <a href="finder.html" class="aNav">Finder</a>
     <a href="review.html" class="aNav">Review</a>
     <a href="about.html" class="aNav">About Us</a>
   </nav>
-
-  <!-- TODO: add in header -->
-</header>
-<body>
     <!-- links to other pages in site, fixed  -->
-    <section class="paragraph">
-        We at <em><b>Adventure Finders&trade;</b></em> want to thank you for taking the time to go through our process so we could find you the best camp site for you and for trusting us with your adventures!</p>
+  <section class="paragraph">
+        <p>We at <em><b>Adventure Finders&trade;</b></em> want to thank you for taking the time to go through our process so we could find you the best camp site for you and for trusting us with your adventures!</p>
 
         <p> We would appreciate it if you would take just a few more seconds to fill out our servey so we will be able to better help you and many other find their future adventure! </p>
     </section>
@@ -71,7 +71,7 @@
             <input type="radio" name="pet" value="0"> Poor
             <input type="radio" name="pet" value="1"> Average
             <input type="radio" name="pet" value="2"> Good
-            <input type="radio" name="pet" value="3"> Excllent
+            <input type="radio" name="pet" value="3"> Excellent
           </label>
         </div>
         <div>
@@ -100,22 +100,22 @@
             <label class="radio" for="quesions">
               <input type="radio" name="areaType" value="forest"> Forested
               <input type="radio" name="areaType" value="mountain"> Mountainous
-              <input type="radio" name="areaType" value="coastal"> Costal
+              <input type="radio" name="areaType" value="coastal"> Coastal
             </label>
         </div>
         <div>
           <h1 id="">Location</h1>
           <p>Please provide the Latitude and Longitude of the campground.</p>
-          <input type="text" placeholder="latitude" id="lat" name="lat" />
-          <input type="text" placeholder="longitude" id="long" name="long" />
+          <input type="text" placeholder="Latitude" id="lat" name="lat" />
+          <input type="text" placeholder="Longitude" id="long" name="long" />
         </div>
         <input type="submit" value="Submit" id="formBtn">
     </form>
     <div >
-        <p id="frame">
-           Don't know the coordinates? Look them up on <a href="http://www.latlong.net/">MyGeoposition.com</a> by entering the campground name in the search box below:
+        <p class="frame">
+           Don't know the coordinates?</p> <p class="frame">Look them up on <a href="http://www.latlong.net/">MyGeoposition.com</a> by entering the campground name in the search box below:
         </p>
-        <iframe id="iFrame" src="http://mygeoposition.com/" width="800" height="400"></iframe>
+        <iframe id="iFrame" src="http://mygeoposition.com/"></iframe>
     </div>
 
     <!-- <div>Please tell us about your adventure!</p>
