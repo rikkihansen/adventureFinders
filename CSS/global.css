@@ -65,7 +65,6 @@ a:hover {
   }
   .paragraph {
     font-size: 20px;
-    text-align: center;
     padding-left: 20px;
     padding-right: 20px;
     padding-top: 50px;
@@ -75,4 +74,12 @@ a:hover {
     background-color: rgba(255, 255, 255, 0.4);
     border: 1px solid black;
     color:black;
+    text-align: center;
   }
+  /*.gitHub a {
+    font-size: 30px;
+    padding-left: 20px;
+    font-family: 'Indie Flower', cursive;
+    color: #e49d10;
+    text-decoration: none;
+  }*/

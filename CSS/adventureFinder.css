@@ -27,25 +27,7 @@
   transition: 0.5s ease;
   display: inline-block;
 }
+a:hover {
+  transform: scale(1.2);
 
-#radio1 {
-  display: none;
-}
-#radio2 {
-  display: none;
-}
-#radio3 {
-  display: none;
-}
-#radio4 {
-  display: none;
-}
-#radio5 {
-  display: none;
-}
-#radio6 {
-  display: none;
-}
-#radio7 {
-  display: none;
 }

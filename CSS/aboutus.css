@@ -15,6 +15,16 @@
   padding-top: 100px;
   opacity: 0.9;
 }
+.content a {
+  font-size: 30px;
+  padding-left: 25px;
+  font-family: 'Indie Flower', cursive;
+  color: #e49d10;
+  text-decoration: none;
+  margin-left: 190px;
+  transition: 0.5s ease;
+  display: inline-block;
+}
 .img {
   margin-left: 120px;
   margin-top: 200px;
@@ -25,4 +35,7 @@
 .img:hover {
   opacity: 0.5;
   transition: 0.5s;
+}
+a:hover {
+  transform: scale(1.2);
 }
