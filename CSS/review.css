@@ -1,0 +1,73 @@
+body {
+  background-color: #C0B0B2;
+  position:relative;
+}
+.image {
+  margin-top: 0;
+  position: relative;
+  background-image: url("Images/forest_review_banner.png");
+  width: 100%;
+  height: 300px;
+  margin-bottom: 0;
+  opacity: 0.6;
+  }
+.title {
+  padding: 100px;
+  margin-top: 0;
+  color: rgba(53, 154, 255, 1);
+  }
+nav {
+  position: static;
+  margin: 0;
+}
+form {
+  padding-left: 10px;
+  width: 80%;
+  margin: 30px auto;
+  background-color: rgba(255, 255, 255, 0.4);
+  border: 1px solid black;
+}
+label {
+  font-family: 'Montserrat', Tenor Sans, sans-serif;
+}
+input[type=text] {
+    width: 300px;
+    height: 25px;
+}
+input[type=radio] {
+  display      : inline-block;
+  margin-left  :  2em;
+  line-height  : 1.5em;
+}
+input.required {
+    background-color: red;
+    color: black;
+}
+.required {
+  color: red;
+}
+.frame {
+  margin-left: 10%;
+  margin-right: 10%;
+  text-align: center;
+}
+
+iframe {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  width: 800px;
+  height: 400px;
+}
+::-webkit-input-placeholder {
+  font-family: 'Montserrat', Tenor Sans, sans-serif;
+}
+::-moz-placeholder {
+  font-family: 'Montserrat', Tenor Sans, sans-serif;
+  } /* firefox 19+ */
+:-ms-input-placeholder {
+  font-family: 'Montserrat', Tenor Sans, sans-serif;
+  } /* ie */
+input:-moz-placeholder {
+  font-family: 'Montserrat', Tenor Sans, sans-serif;
+ }

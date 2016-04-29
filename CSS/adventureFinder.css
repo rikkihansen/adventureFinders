@@ -1,0 +1,51 @@
+/* home page css */
+.wrap {
+  height: 1000px;
+  width: 100%;
+  background-image: url("../Images/backgroundimage.jpeg");
+  position: fixed;
+  z-index: -10;
+  top: 0;
+}
+.content {
+  width: 100%;
+  background-color: rgba(121, 95, 99, 1);
+  color: #e49d10;
+  margin-top: 1000px;
+  padding-bottom: 100px;
+  opacity: 0.9;
+}
+.headings {
+  font-size: 60px;
+  font-weight: bold;
+  font-family: 'Montserrat',Tenor Sans, sans-serif;
+  text-align: center;
+}
+.headings a {
+  text-decoration: none;
+  color: #e49d10;
+  transition: 0.5s ease;
+  display: inline-block;
+}
+
+#radio1 {
+  display: none;
+}
+#radio2 {
+  display: none;
+}
+#radio3 {
+  display: none;
+}
+#radio4 {
+  display: none;
+}
+#radio5 {
+  display: none;
+}
+#radio6 {
+  display: none;
+}
+#radio7 {
+  display: none;
+}
