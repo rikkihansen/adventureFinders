@@ -71,3 +71,6 @@ iframe {
 input:-moz-placeholder {
   font-family: 'Montserrat', Tenor Sans, sans-serif;
  }
+input[type=radio]:checked {
+  color:#e49d10;
+}
