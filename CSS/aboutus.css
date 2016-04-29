@@ -1,0 +1,28 @@
+.wrap {
+  height: 1000px;
+  width: 100%;
+  background-image: url("../Images/background3.jpg");
+  position: fixed;
+  z-index: -10;
+  top: 0;
+}
+.content {
+  width: 100%;
+  background-color: rgba(121, 95, 99, 1);
+  color: #e49d10;
+  margin-top: 400px;
+  padding-bottom: 200px;
+  padding-top: 100px;
+  opacity: 0.9;
+}
+.img {
+  margin-left: 120px;
+  margin-top: 200px;
+  height: 300px;
+  width: auto;
+  border-radius: 150px;
+}
+.img:hover {
+  opacity: 0.5;
+  transition: 0.5s;
+}
