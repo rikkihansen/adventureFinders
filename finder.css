@@ -6,4 +6,98 @@ width: 65%;
 height: 400px;
 margin: 50px auto;
 
+/*Hide / Show questions*/
+}
+#radio1 {
+  display: none;
+}
+#radio2 {
+  display: none;
+}
+#radio3 {
+  display: none;
+}
+#radio4 {
+  display: none;
+}
+#radio5 {
+  display: none;
+}
+#radio6 {
+  display: none;
+}
+#radio7 {
+  display: none;
+}
+#radio8 {
+  display: none;
+}
+#radio8 {
+  display: none;
+}
+#mapid {
+width: 100%;
+height: 400px;
+}
+
+#banner {position: absolute; height: 21vw;}
+
+.titleBox {position: relative; height: 21vw;
+  margin-top: -24px; margin-right: -8px;
+  display: table;
+  background: rgba(0, 0, 0, 0.5);
+  text-align: center;}
+
+.tableText {display: table-cell; vertical-align: middle; width: 5120px; color: #e49d10;}
+.titleText {font-family: 'Indie Flower', cursive; font-size: 4vw;}
+.underTitle{font-family: 'Montserrat'; font-size: 3vw;}
+.underTitleText{font-family: 'Montserrat'; font-size: 1.33vw;}
+
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity: 1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity: 1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity: 1; } }
+
+.fade-in {
+  opacity:0;
+  -webkit-animation:fadeIn ease-in 1;
+  -moz-animation:fadeIn ease-in 1;
+  animation:fadeIn ease-in 1;
+
+  -webkit-animation-fill-mode:forwards;
+  -moz-animation-fill-mode:forwards;
+  animation-fill-mode:forwards;
+
+  -webkit-animation-duration:1s;
+  -moz-animation-duration:1s;
+  animation-duration:1s;
+}
+
+.fadeInDelay {
+  -webkit-animation-delay: 1s;
+  -moz-animation-delay: 1s;
+  animation-delay: 1s;
+}
+
+nav {
+ width: 100%;
+ height: 1.5vw;
+ display: table;;
+ position: fixed;
+ z-index: 10;
+ top: 0;
+}
+#topNav a {
+  color: #e49d10;
+  margin-top: 1vw; margin-bottom: 1vw;
+  font-size: 1vw;
+}
+#topNav {
+  background-color: #041534;
+  position: static;
+  text-align: center;
+}
+
+.displaySpace{
+  text-align: center;
+  margin: 3vw;
 }

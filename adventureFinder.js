@@ -65,6 +65,13 @@ function buttonBinder(inputID, property, counter) {
     });
 }
 
+function startQuizBinder() {
+  startQuiz.addEventListener('click', function() {
+    listenAction();
+  });
+}
+
+
 //listener Functions
 function listenAction() {
     if (availableCamp.length == 0) {
@@ -103,6 +110,7 @@ function removeQuestion() {
 //Functions that fun on pageload---------------------------------
 window.onload = function() {
     getCampResults();
+    startQuizBinder();
     buttonBinder('comfort0', 'comfort', comfortCounter++);
     buttonBinder('comfort1', 'comfort', comfortCounter++);
     buttonBinder('comfort2', 'comfort', comfortCounter++);
@@ -232,7 +240,7 @@ function showUserResults() {
     addMarkers(); //updates map with remioaning markers in availableCamp
     console.log(x);
     removeQuestion();
-    x = 7;
+    x = 8;
     displayQuestion();
     winningCamps();
     console.log("user results");
