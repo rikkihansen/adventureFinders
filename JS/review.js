@@ -84,3 +84,10 @@ function thankUser() {
     document.getElementById("iFrame").setAttribute("display", "none");
     document.getElementById("campQuestions").innerHTML = "Thank you for submitting a new camp!";
 };
+
+document.getElementById("iframeLoad").addEventListener("click", function(){
+  var iframeShow = document.getElementById("iFrame");
+  iframeShow.style.display = "block";
+  var removeButton = document.getElementById("iframeLoad");
+  removeButton.style.display = "none";
+})

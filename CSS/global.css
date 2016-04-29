@@ -4,29 +4,77 @@ html {
 }
 body {
   margin: 0px;
+  background-color: #041534;
 }
 nav {
  width: 100%;
- height: 75px;
- display: inline-block;
+ height: 1.5vw;
+ display: table;
  background-color: rgba(255, 255, 255, 0.4);
- position: fixed;
+ position: static;
  z-index: 10;
  top: 0;
+ text-align: center;
 }
 p {
   font-family: 'Montserrat', Tenor Sans, sans-serif;
   color:black;
-  font-size: 20px;
+  font-size: 1vw;
 }
+
+/*creates a placeholder for a banner image*/
+#banner {}
+.bannerImg {position: absolute; height: 21vw; overflow: hidden}
+
+/*creates a box for text that appears on top of the banner image*/
+.titleBox {position: relative; height: 21vw;
+  margin-top: -24px; margin-right: -8px;
+  display: table;
+  background: rgba(0, 0, 0, 0.5);
+  text-align: center;}
+
+/*centers text vertically in the titleBox */
+.tableText {display: table-cell; vertical-align: middle; width: 5120px; color: #e49d10;}
+/*styling for instructional text*/
+.instructionText{font-family: 'Montserrat'; font-size: 1.33vw;}
+.instructionTitle{font-family: 'Montserrat'; font-size: 3vw; color: #e49d10;}
+
+/*creates the fade-in over the banner image*/
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity: 1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity: 1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity: 1; } }
+
+.fade-in {
+  opacity:0;
+  -webkit-animation:fadeIn ease-in 1;
+  -moz-animation:fadeIn ease-in 1;
+  animation:fadeIn ease-in 1;
+
+  -webkit-animation-fill-mode:forwards;
+  -moz-animation-fill-mode:forwards;
+  animation-fill-mode:forwards;
+
+  -webkit-animation-duration:1s;
+  -moz-animation-duration:1s;
+  animation-duration:1s;
+}
+
+.fadeInDelay {
+  -webkit-animation-delay: 1s;
+  -moz-animation-delay: 1s;
+  animation-delay: 1s;
+}
+
+/*default nav styling*/
 #topNav a {
   color: #e49d10;
-  margin: 100px;
-  font-size: 20px;
+  margin-top: 1vw;
+  margin-bottom: 1vw;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  font-size: 1.5vw;
   text-decoration: none;
   font-family: 'Montserrat',Tenor Sans, sans-serif;
-  padding-left: 50px;
-  margin-top: 25px;
   display: inline-block;
   z-index: 20;
   transition: 0.5s ease;
@@ -38,23 +86,26 @@ a:hover {
 }
 .title {
   font-family: 'Indie Flower', cursive;
-  font-size: 80px;
+  font-size: 6vw;
   color: #e49d10;
   text-align: center;
-  margin-top: 300px;
   }
-  footer {
-    width: 100%;
-    height: 75px;
-    display: inline-block;
-  }
+
+footer {
+  width: 100%;
+  height: 1.5vw;
+  display: table;
+  text-align: center;
+}
   .bottomNav a{
     color: black;
-    margin-left: 150px;
-    font-size: 20px;
+    margin-top: 1vw;
+    margin-bottom: 1.5vw;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    font-size: 1.5vw;
     text-decoration: none;
-    font-family: 'Montserrat', Tenor Sans, sans-serif;
-    margin-top: 25px;
+    font-family: 'Montserrat',Tenor Sans, sans-serif;
     display: inline-block;
     transition: 0.5s ease;
 
@@ -62,17 +113,4 @@ a:hover {
   .bottomNav {
     background-color: white;
     opacity: 0.6;
-  }
-  .paragraph {
-    font-size: 20px;
-    text-align: center;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    width: 800px;
-    margin: 30px auto;
-    background-color: rgba(255, 255, 255, 0.4);
-    border: 1px solid black;
-    color:black;
   }

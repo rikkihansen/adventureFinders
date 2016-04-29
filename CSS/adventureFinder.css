@@ -1,4 +1,6 @@
 /* home page css */
+nav { position: fixed; }
+
 .wrap {
   height: 1000px;
   width: 100%;
@@ -28,24 +30,20 @@
   display: inline-block;
 }
 
-#radio1 {
-  display: none;
-}
-#radio2 {
-  display: none;
-}
-#radio3 {
-  display: none;
-}
-#radio4 {
-  display: none;
-}
-#radio5 {
-  display: none;
-}
-#radio6 {
-  display: none;
-}
-#radio7 {
-  display: none;
+.title {
+  margin-top: 300px;
+  }
+
+.paragraph {
+  font-size: 20px;
+  text-align: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  width: 800px;
+  margin: 30px auto;
+  background-color: rgba(255, 255, 255, 0.4);
+  border: 1px solid black;
+  color:black;
 }
