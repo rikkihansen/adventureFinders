@@ -1,6 +1,13 @@
 /* home page css */
 nav { position: fixed; }
 
+img {
+  display: block;
+  height: 6vw;
+  width: 6vw;
+  margin: 0 auto;
+  margin-bottom: 2vw;
+}
 .wrap {
   height: 1000px;
   width: 100%;
