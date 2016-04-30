@@ -47,10 +47,12 @@ function evaluateForm(newCamp) {
         formIsValid = false;
     }
     if (newCamp.lat.value == "") {
+        document.getElementById("location").setAttribute("class", "required");
         newCamp.lat.setAttribute("class", "required");
         formIsValid = false;
     }
     if (newCamp.long.value == "") {
+        document.getElementById("location").setAttribute("class", "required");
         newCamp.long.setAttribute("class", "required");
         formIsValid = false;
     }

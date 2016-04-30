@@ -142,7 +142,7 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=p
     accessToken: 'pk.eyJ1IjoiamFtZXNjc21pdGgiLCJhIjoiY2luOWM1Z25sMXBsMnR5bHk0Nzlmc2J1dyJ9.97nb1uyTiSLTmXvbdYdWoA'
 }).addTo(mymap);
 var myIcon = L.icon({
-    iconUrl: 'images/nature.png',
+    iconUrl: '../Images/nature.png',
     iconSize: [35, 35],
     iconAnchor: [15, 30],
 });
