@@ -40,3 +40,6 @@
 a:hover {
   transform: scale(1.2);
 }
+.title {
+  margin-top: 300px;
+}
