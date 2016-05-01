@@ -27,6 +27,8 @@
   padding-top: 45px;
 }
 .img {
+  display: inline-block;
+  text-align: center;
   margin-left: 120px;
   margin-top: 200px;
   height: 300px;
@@ -39,4 +41,7 @@
 }
 a:hover {
   transform: scale(1.2);
+}
+.title {
+  margin-top: 300px;
 }
