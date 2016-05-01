@@ -4,11 +4,9 @@ height: 400px;
 margin: 50px auto;
 }
 
-body {
-  background-color: white;
-}
-
 /*Hide / Show questions*/
+#radio0 {
+  display: block;
 }
 #radio1 {
   display: none;
@@ -34,6 +32,6 @@ body {
 #radio8 {
   display: none;
 }
-#radio8 {
+#radio9 {
   display: none;
 }

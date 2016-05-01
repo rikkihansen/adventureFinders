@@ -9,27 +9,26 @@
   <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
 </head>
 <body>
-<img id= "banner" src="../Images/the_bay.jpg">
+    <img class= "bannerImg" src="../Images/the_bay.jpg">
   <div class = "titleBox fade-in fadeInDelay">
     <span class= "tableText"><h1 class="title">Adventure Finder</h1></span>
   </div>
   <nav id="topNav">
-    <!-- <span class= "tableText"> -->
-      <a href="index.html" class="aNav">Home</a>
+      <a href="../index.html" class="aNav">Home</a>
       <a href="finder.html" class="aNav">Finder</a>
       <a href="review.html" class="aNav">Review</a>
       <a href="about.html" class="aNav">About Us</a>
-    <!-- </span> -->
   </nav>
 
-    <!-- Starting Finder questions -->
-  <form  class = "displaySpace" id="question">
+  <!-- Starting Finder questions -->
+  <form class = "displaySpace instructionText paragraph" id="question">
     <div id="radio0">
-        <h1 class= "underTitle">Welcome to Finder&trade;!</h1><h3 class="underTitleText">We at <em><b>Adventure Finder&trade;</b></em> have put together a series of questions for you to answer so that we can pair you up with the best camp site to give you an amazing camping experience! Please go through the questionnaire us what is important to you.</h3>
-        <button id = "startQuiz" type="button">Begin</button>
+        <h1 class= "instructionTitle">Welcome to Finder&trade;!</h1>
+        <p>We at <em><b>Adventure Finder&trade;</b></em> have put together a series of questions for you to answer so that we can pair you up with the best camp site to give you an amazing camping experience! Please go through the questionnaire us what is important to you.</p>
+        <button id="startQuiz" type="button">Begin</button>
     </div>
     <div id="radio1">
-      <p><strong><em>Which best describes you?</em></strong></p>
+      <h1 class= "instructionTitle">Which best describes you?</h1>
       <label class="radio" for="questions">
         <p><input id="comfort0" type="radio" name="question1"> Glamper: When I camp, I do it in style</p>
         <p><input id="isolation0" type="radio" name="question1"> Adventurer: I want to get out and explore</p>
@@ -38,7 +37,7 @@
       </label>
     </div>
     <div id="radio2">
-      <p><strong><em>On this trip, I really want:</em></strong></p>
+      <h1 class= "instructionTitle">On this trip, I really want:</h1>
       <label class="radio" for="questions">
         <p><input id="isolation1" type="radio" name="question2"> To get as far away from civilization as I can</p>
         <p><input id="comfort1" type="radio" name="question2"> A home away from home</p>
@@ -47,7 +46,7 @@
       </label>
     </div>
     <div id="radio3">
-      <p><strong><em>Who's the most important person(s) you're taking with you?</em></strong></p>
+      <h1 class= "instructionTitle">Who's the most important person(s) you're taking with you?</h1>
       <label class="radio" for="questions">
         <p><input id="family1" type="radio" name="question3"> My family</p>
         <p><input id="pet1" type="radio" name="question3"> My dog</p>
@@ -56,7 +55,7 @@
       </label>
       </div>
     <div id="radio4">
-      <p><strong><em>Which of the following activities are you looking forward to the most?</em></strong></p>
+      <h1 class= "instructionTitle">Which of the following activities are you looking forward to the most?</h1>
       <label class="radio" for="questions">
         <p><input id="accessibility2" type="radio" name="question4"> Sightseeing</p>
         <p><input id="activities2" type="radio" name="question4"> Frisbee golf</p>
@@ -65,7 +64,7 @@
       </label>
     </div>
     <div id="radio5">
-      <p><strong><em>What's the best way to spend a lazy afternoon?</em></strong></p>
+      <h1 class= "instructionTitle">What's the best way to spend a lazy afternoon?</h1>
       <label class="radio" for="questions">
         <p><input id="accessibility3" type="radio" name="question5"> Strolling through a tiny coastal town</p>
         <p><input id="pet2" type="radio" name="question5"> Playing fetch</p>
@@ -74,7 +73,7 @@
       </label>
     </div>
     <div id="radio6">
-      <p><strong><em>What is your favorite sound?</em></strong></p>
+      <h1 class= "instructionTitle">What is your favorite sound?</em></strong></h1>
       <label class="radio" for="questions">
         <p><input id="pet3" type="radio" name="question6"> Purring</p>
         <p><input id="isolation3" type="radio" name="question6"> A revving engine</p>
@@ -83,7 +82,7 @@
       </label>
     </div>
     <div id="radio7">
-      <p><strong><em>What's your favorite smell?</em></strong></p>
+      <h1 class= "instructionTitle">What's your favorite smell?</h1>
       <label class="radio" for="questions">
         <p><input id="forest" type="radio" name="question7"> Pine fresh</p>
         <p><input id="coastal" type="radio" name="question7"> Salt air</p>
@@ -91,8 +90,8 @@
       </label>
     </div>
     <div id="radio8">
-      <p><strong><em>Thank you very much for taking the time to answer a few quick question so we can find the perfect campsite for your next adventure!</em></strong></p>
-      <h1>Your Results:</h1>
+      <h1 class= "instructionTitle">Thank you very much for taking the time to answer a few quick question so we can find the perfect campsite for your next adventure!</h1>
+      <h1<h1 class= "instructionTitle">Your Results:</h1>
       <ul id="results"> My camp</ul>
     </div>
   </form>

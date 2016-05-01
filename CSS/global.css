@@ -19,12 +19,11 @@ nav {
 p {
   font-family: 'Montserrat', Tenor Sans, sans-serif;
   color:black;
-  font-size: 1vw;
+  font-size: 1.5vw;
 }
 
 /*creates a placeholder for a banner image*/
-#banner {}
-.bannerImg {position: absolute; height: 21vw; overflow: hidden}
+.bannerImg {position: absolute; height: 21vw; overflow: hidden;}
 
 /*creates a box for text that appears on top of the banner image*/
 .titleBox {position: relative; height: 21vw;
@@ -90,6 +89,15 @@ a:hover {
   color: #e49d10;
   text-align: center;
   }
+
+.paragraph {
+  padding-left: 10px;
+  width: 80%;
+  margin: 30px auto;
+  background-color: rgba(255, 255, 255, 0.4);
+  border: 1px solid black;
+  text-align: center;
+}
 
 footer {
   width: 100%;

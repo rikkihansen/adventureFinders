@@ -5,6 +5,7 @@ form {
     margin: 30px auto;
     background-color: rgba(255, 255, 255, 0.4);
     border: 1px solid black;
+    text-align: center;
 }
 
 label {
@@ -24,14 +25,7 @@ input.required {
     background-color: #8a0707;
     color: black;
 }
-.paragraph {
-  padding-left: 10px;
-  width: 80%;
-  margin: 30px auto;
-  background-color: rgba(255, 255, 255, 0.4);
-  border: 1px solid black;
 
-}
 .required {
     color: #8a0707;
 }
@@ -62,7 +56,6 @@ input.required {
 .frame {
     margin-left: 10%;
     margin-right: 10%;
-    text-align: center;
     color: #e49d10;
 }
 iframe {
