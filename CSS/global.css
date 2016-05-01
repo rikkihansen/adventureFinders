@@ -26,7 +26,7 @@ p {
 .bannerImg {position: absolute; height: 21vw; overflow: hidden;}
 
 /*creates a box for text that appears on top of the banner image*/
-.titleBox {position: relative; height: 21vw;
+.titleBox {position: relative; height: 21.025vw;
   margin-top: -24px; margin-right: -8px;
   display: table;
   background: rgba(0, 0, 0, 0.5);
@@ -134,5 +134,27 @@ footer {
     background-color: rgba(255, 255, 255, 0.4);
     border: 1px solid black;
     color:black;
+    text-align: center;
+  }
+
+  .btnStyle {
+    margin: 0 auto;
+    text-align: center;
+    color: #e49d10;
+    background-color:#3d3c50;
+    border: none;
+    padding: 15px 32px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.5vw;
+    width: 20vw;
+    margin-bottom: 2vw;
+  }
+  .btnStyle:hover {
+    opacity: 0.6;
+    transition: 0.7s ease-out;
+  }
+
+  .btnContainer {
     text-align: center;
   }

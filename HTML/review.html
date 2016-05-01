@@ -106,8 +106,8 @@
           <input type="text" placeholder="Latitude" id="lat" name="lat" />
           <input type="text" placeholder="Longitude" id="long" name="long" />
         </div>
-        <div class="submitBtn">
-          <input type="submit" value="Submit" id="formBtn">
+        <div class="btnContainer">
+          <input class="btnStyle" type="submit" value="Submit" id="formBtn">
         </div>
     </form>
     <div>
@@ -115,7 +115,7 @@
            *Don't know the coordinates?</p> <p class="frame">Look them up on <a href="http://www.latlong.net/">MyGeoposition.com</a> by clicking the button and entering the campground name in the search box below:
         </p>
         <div class="iframeLoadContainer">
-          <button id="iframeLoad" type="button">Get Coordinates</button>
+          <button class="btnStyle" id="iframeLoad" type="button">Get Coordinates</button>
         </div>
         <iframe id="iFrame" src="http://mygeoposition.com/"></iframe>
     </div>

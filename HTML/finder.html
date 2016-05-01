@@ -22,10 +22,12 @@
 
   <!-- Starting Finder questions -->
   <form class = "displaySpace instructionText paragraph" id="question">
-    <div id="radio0">
+    <div class="radioStyle" id="radio0">
         <h1 class= "instructionTitle">Welcome to Finder&trade;!</h1>
         <p>We at <em><b>Adventure Finder&trade;</b></em> have put together a series of questions for you to answer so that we can pair you up with the best camp site to give you an amazing camping experience! Please go through the questionnaire us what is important to you.</p>
-        <button id="startQuiz" type="button">Begin</button>
+        <div class="btnContainer">
+          <button class ="btnStyle" id="startQuiz" type="button">Begin</button>
+        </div>
     </div>
     <div id="radio1">
       <h1 class= "instructionTitle">Which best describes you?</h1>
@@ -90,14 +92,15 @@
       </label>
     </div>
     <div id="radio8">
-      <h1 class= "instructionTitle">Thank you very much for taking the time to answer a few quick question so we can find the perfect campsite for your next adventure!</h1>
-      <h1<h1 class= "instructionTitle">Your Results:</h1>
+      <p>Thank you very much for taking the time to answer a few quick question so we can find the perfect campsite for your next adventure!</p>
+      <h1 class= "instructionTitle">Your Results:</h1>
       <ul id="results"> My camp</ul>
     </div>
   </form>
   <div id="mapid"></div>
 </div>
-<button id="reset" type="button">Start Over</button>
+<div class="btnContainer">
+  <button class="btnStyle" id="reset" type="button">Start Over</button>
 </div>
   <div class="bottomNav">
     <footer>

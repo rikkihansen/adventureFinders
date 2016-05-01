@@ -1,11 +1,11 @@
 
 form {
     padding-left: 10px;
+    padding-right: 10px;
     width: 80%;
     margin: 30px auto;
     background-color: rgba(255, 255, 255, 0.4);
     border: 1px solid black;
-    text-align: center;
 }
 
 label {
@@ -32,31 +32,12 @@ input.required {
 #long, #lat {
   margin-bottom: 5vw;
 }
-.submitBtn {
-  text-align: center;
-}
-#formBtn {
-  margin: 0 auto;
-  text-align: center;
-  color: #e49d10;
-  background-color:#3d3c50;
-  border: none;
-  padding: 15px 32px;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  width: 20vw;
-  margin-bottom: 2vw;
-}
-#formBtn:hover {
-  opacity: 0.6;
-  transition: 0.7s ease-out;
-}
 
 .frame {
     margin-left: 10%;
     margin-right: 10%;
     color: #e49d10;
+    text-align: center;
 }
 iframe {
     display: none;

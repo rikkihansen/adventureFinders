@@ -1,5 +1,21 @@
+.paragraph {
+  text-align: left;
+  padding-left: 50px;
+}
+
+.instructionTitle {
+  text-align: center;
+}
+
+
+ul {
+  list-style-type: none;
+  text-align: center;
+  margin-left: -50px;
+}
+
 #mapid {
-width: 65%;
+width: 50%;
 height: 400px;
 margin: 50px auto;
 }
@@ -34,4 +50,8 @@ margin: 50px auto;
 }
 #radio9 {
   display: none;
+}
+
+.radioStyle {
+  vertical-align: middle;
 }
