@@ -17,7 +17,7 @@ campArray.push(new Camp('Jefferson Park', 0, 3, 1, 2, 0, 0, "forest", [44.71005,
 campArray.push(new Camp('Elk Mountain', 0, 2, 2, 3, 1, 0, "mountain", [45.33468, -121.6075  6]));
 campArray.push(new Camp('Grand Valley/Badger Valley', 0, 3, 0, 1, 1, 0, "forest", [43.2011000, -120.5542010]));
 campArray.push(new Camp('Timberline Trail Near Umbrella Falls', 0, 3, 0, 0, 0, 0, "forest", [47.898, -123.369]));
-campArray.push(new Camp("Lost Lake", 1, 1, 3, 1, 3, 3, "forest", [45.4900, -121.8223]));
+campArray.push(new Camp("Lost Lake", 1, 1, 3, 1, 3, 3, "mountain", [45.4900, -121.8223]));
 campArray.push(new Camp("Olallie Lake", 1, 2, 1, 2, 2, 2, "mountain", [44.807903, -121.788338]));
 campArray.push(new Camp("LaPine State Park", 2, 1, 2, 1, 2, 3, "forest", [43.4606, -121.3048]));
 campArray.push(new Camp("Beverly Beach", 2, 2, 2, 1, 3, 3, "coastal", [44.7205, -124.0563]));
@@ -54,7 +54,7 @@ function questionFilter(property, propertyValue) {
     });
 }
 
-//Removes all objects with a "false" value for the object property selected, and increases the counter for that property
+//Removes all objects with the assigned value for the object property selected, and increases the counter for that property
 function buttonBinder(inputID, property, counter) {
     var radios = document.getElementById(inputID);
     radios.addEventListener('click', function() {
@@ -134,9 +134,9 @@ window.onload = function() {
     buttonBinder('pet1', 'pet', petCounter++);
     buttonBinder('pet2', 'pet', petCounter++);
     buttonBinder('pet3', 'pet', petCounter++);
-    buttonBinder('forest', 'forest', areaCounter++);
-    buttonBinder('coastal', 'coastal', areaCounter++);
-    buttonBinder('mountain', 'mountain', areaCounter++);
+    buttonBinder('forest', 'areaType', 'forest');
+    buttonBinder('coastal', 'areaType', 'coastal');
+    buttonBinder('mountain', 'areaType', 'mountain');
 }
 
 // initialize and add interactive Leafletjs map centered on Oregon with custom icons
