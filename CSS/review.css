@@ -64,6 +64,7 @@ iframe {
     margin-bottom: 50px;
     width: 800px;
     height: 400px;
+
 }
 
 .iframeLoadContainer {
@@ -87,5 +88,5 @@ iframe {
 /* ie */
 
 input:-moz-placeholder {
-    font-family: 'Montserrat', Tenor Sans, sans-serif;
-}
+  font-family: 'Montserrat', Tenor Sans, sans-serif;
+ }
