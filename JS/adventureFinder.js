@@ -14,7 +14,7 @@ var Camp = function(campName, comfort, isolation, accessibility, pet, family, ac
 // Making empty Array to push camp data into ----------
 var campArray = new Array();
 campArray.push(new Camp('Jefferson Park', 0, 3, 1, 2, 0, 0, "forest", [44.71005, -121.801]));
-campArray.push(new Camp('Elk Mountain', 0, 2, 2, 3, 1, 0, "mountain", [45.33468, -121.6075  6]));
+campArray.push(new Camp('Elk Mountain', 0, 2, 2, 3, 1, 0, "mountain", [45.33468, -121.60756]));
 campArray.push(new Camp('Grand Valley/Badger Valley', 0, 3, 0, 1, 1, 0, "forest", [43.2011000, -120.5542010]));
 campArray.push(new Camp('Timberline Trail Near Umbrella Falls', 0, 3, 0, 0, 0, 0, "forest", [47.898, -123.369]));
 campArray.push(new Camp("Lost Lake", 1, 1, 3, 1, 3, 3, "mountain", [45.4900, -121.8223]));
