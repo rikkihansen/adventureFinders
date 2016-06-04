@@ -6,6 +6,10 @@
   z-index: -10;
   top: 0;
 }
+.team {
+  width: 80%;
+  margin: 0 auto;
+}
 figure {
   width: -webkit-min-content;
   width: -moz-min-content;
@@ -23,7 +27,7 @@ figure {
 }
 .content a {
   position: relative;
-  font-size: 20px;
+  font-size: 30px;
   /*padding-left: 25px;*/
   font-family: 'Indie Flower', cursive;
   color: #e49d10;
@@ -34,15 +38,15 @@ figure {
 }
 figcaption {
   text-align: center;
+  margin-bottom: 100px;
 }
 .img {
   position: relative;
   display: inline-block;
   text-align: center;
-  /*margin-left: 120px;*/
-  margin-top: 200px;
-  height: 10em;
-  width: auto;
+  margin-left: 25px;
+  margin-top: 100px;
+  height: 14em;
   border-radius: 50%;
 }
 .img:hover {
