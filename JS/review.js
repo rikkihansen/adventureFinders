@@ -15,6 +15,7 @@ function evaluateForm(newCamp) {
     var formIsValid = true;
     if (newCamp.campName.value == "") {
         newCamp.campName.setAttribute("class", "required");
+        document.getElementById("campName").setAttribute("class", "required");
         formIsValid = false;
     }
     if (newCamp.comfort.value == "") {

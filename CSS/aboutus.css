@@ -6,6 +6,12 @@
   z-index: -10;
   top: 0;
 }
+figure {
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  display: inline-block;
+}
 .content {
   width: 100%;
   background-color: rgba(121, 95, 99, 1);
@@ -16,24 +22,28 @@
   opacity: 0.9;
 }
 .content a {
-  font-size: 30px;
-  padding-left: 25px;
+  position: relative;
+  font-size: 20px;
+  /*padding-left: 25px;*/
   font-family: 'Indie Flower', cursive;
   color: #e49d10;
   text-decoration: none;
-  margin-left: 190px;
+  text-align: center;
   transition: 0.5s ease;
-  display: inline-block;
   padding-top: 45px;
 }
+figcaption {
+  text-align: center;
+}
 .img {
+  position: relative;
   display: inline-block;
   text-align: center;
-  margin-left: 120px;
+  /*margin-left: 120px;*/
   margin-top: 200px;
-  height: 300px;
+  height: 10em;
   width: auto;
-  border-radius: 150px;
+  border-radius: 50%;
 }
 .img:hover {
   opacity: 0.5;
